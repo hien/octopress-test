@@ -4,7 +4,7 @@
   <title><![CDATA[Mr.Hien's Blog]]></title>
   <link href="http://mrhien.info/atom.xml" rel="self"/>
   <link href="http://mrhien.info/"/>
-  <updated>2012-01-31T22:36:08+07:00</updated>
+  <updated>2012-02-01T00:25:38+07:00</updated>
   <id>http://mrhien.info/</id>
   <author>
     <name><![CDATA[Hien]]></name>
@@ -1000,9 +1000,9 @@ Với “freebsdvn_logo.png” là tập tin ảnh cần xoay 90 độ và “fr
   
   <entry>
     <title type="html"><![CDATA[Tạo tập tin ảnh (.iso) của đĩa CD/DVD trong Unix/Linux]]></title>
-    <link href="http://mrhien.infoblog/tao-tap-tin-anh-iso-cua-dia-cd-dvd-trong-linux-unix/"/>
+    <link href="http://mrhien.info/blog/tao-tap-tin-anh-iso-cua-dia-cd-dvd-trong-linux-unix/"/>
     <updated>2010-10-10T12:39:00+07:00</updated>
-    <id>http://mrhien.infoblog/tao-tap-tin-anh-dot-iso-cua-dia-cd-slash-dvd-trong-unix-slash-linux</id>
+    <id>http://mrhien.info/blog/tao-tap-tin-anh-dot-iso-cua-dia-cd-slash-dvd-trong-unix-slash-linux</id>
     <content type="html"><![CDATA[<p>Tạo tập tin ảnh (.iso) của đĩa CD/DVD trong Unix/Linux:
 Với ‘Michael_Jackson.iso’ là tên tập tin ảnh cần lưu.</p>
 
@@ -1014,9 +1014,9 @@ Với ‘Michael_Jackson.iso’ là tên tập tin ảnh cần lưu.</p>
   
   <entry>
     <title type="html"><![CDATA[Chuyển đổi tập tin ảnh của chương trình Nero thành tập tin .ISO!]]></title>
-    <link href="http://mrhien.infoblog/convert-a-nero-image-file-to-iso"/>
+    <link href="http://mrhien.info/blog/convert-a-nero-image-file-to-iso"/>
     <updated>2010-10-10T10:21:00+07:00</updated>
-    <id>http://mrhien.infoblog/chuyen-doi-tap-tin-anh-cua-chuong-trinh-nero-thanh-tap-tin-iso</id>
+    <id>http://mrhien.info/blog/chuyen-doi-tap-tin-anh-cua-chuong-trinh-nero-thanh-tap-tin-iso</id>
     <content type="html"><![CDATA[<p>Chuyển đổi tập tin ảnh của chương trình Nero thành tập tin .ISO:
 Với ‘Michael_Jackson.nrg’ đường dẫn tới tập tin ảnh của Nero cần chuyển.</p>
 
