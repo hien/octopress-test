@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: News | Mr.Hien's Blog]]></title>
+  <link href="http://mrhien.info/blog/category/news/atom.xml" rel="self"/>
+  <link href="http://mrhien.info/"/>
+  <updated>2012-01-31T22:23:31+07:00</updated>
+  <id>http://mrhien.info/</id>
+  <author>
+    <name><![CDATA[Hien]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hệ điều hành Fedora 15 sẽ có tên mã Lovelock]]></title>
+    <link href="http://mrhien.info/blog/fedora-15-se-co-ten-ma-lovelock/"/>
+    <updated>2010-11-06T15:50:00+07:00</updated>
+    <id>http://mrhien.info/blog/he-dieu-hanh-fedora-15-se-co-ten-ma-lovelock</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/fedora-logo.png"></p>
+
+<p>Cộng đồng Fedora đã chọn “<a href="http://mrhien.info/blog/tag/lovelock/[">Lovelock</a>” như là tên mã phiên bản Fedora 15. Fedora 15 sẽ phát hành bản Final trong khoảng thời gian sáu tháng tính từ ngày Fedora 14 được phát hành (02/11/2010).</p>
+
+<p>Theo quy ước đặt tên cho các phiên bản Fedora, mỗi tên kế tiếp phải có một liên kết đến tên trước, nhưng liên kết phải là một kiểu khác nhau của liên kết để liên kết giữa hai cái tên trước đó. Fedora 14 Laughlin được đặt theo tên nhà vật lý Robert B. Laughlin mà liên kết với các Goddard trước khi cả hai đều là tên của nhà vật lý. Rõ ràng mối liên hệ giữa Lovelock và Laughlin là cả hai đều là tên của các thành phố ở <a href="http://en.wikipedia.org/wiki/Nevada">Nevada</a>.</p>
+
+<p>Cuộc bỏ phiếu đã được chia khá đều giữa các năm lựa chọn hàng đầu của Lovelock, Asturias, Blarney, Sturgis và Pushcart, với Lovelock vượt qua Asturias với 729 phiếu so với 701.</p>
+
+<p>Xem thêm kết quả bầu chọn <a href="http://lists.fedoraproject.org/pipermail/announce/2010-November/002878.html">tại đây</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Gửi thông tin an toàn qua Internet]]></title>
+    <link href="http://mrhien.info/blog/gui-thong-tin-an-toan-qua-internet/"/>
+    <updated>2010-04-22T11:49:00+07:00</updated>
+    <id>http://mrhien.info/blog/gui-thong-tin-an-toan-qua-internet</id>
+    <content type="html"><![CDATA[<p>Mặc dù bạn gửi e-mail cho người khác là sự riêng tư và tin chắc không ai có thể đọc được nội dung, nhưng trên thực tế e-mail vẫn có thể bị xâm nhập và can thiệp. Những thông tin quan trọng như thẻ tín dụng, số tài khoản, mật khẩu quan trọng, hoặc những nội dung trao đổi quan trọng nên được gửi đi một cách an toàn hơn.</p>
+
+<p><img class="center" src="http://mrhien.info/wp-content/uploads/small266684.jpg" title="Gui thong tin an toan qua internet" ></p>
+
+<p>Khi thông tin chuyển từ máy chủ này sang máy chủ khác, một số người hiểu biết về kỹ thuật vẫn có thể can thiệp được vào. Vậy làm thế nào để bảo vệ an toàn cho những thông tin đó? Bạn có thể chọn một trong số các phương thức sau…</p>
+
+<!-- more -->
+
+
+<p><strong>Mã hóa</strong>: Tính năng này được khá nhiều chương trình hỗ trợ, chẳng hạn như Outlook 2007. Thông tin sẽ được mã hóa nên bạn có thể yên tâm chia sẻ với mọi người. Tuy nhiên, để bảo vệ thông tin theo cách này, cả người gửi thư và nhận thư đều phải thiết lập chế độ mã hóa cho chương trình.</p>
+
+<p>Và để làm được điều này cũng không phải dễ dàng, nhất là những người không tinh thông về kỹ thuật. Chính vì vậy, người dùng có xu hướng chọn lựa các giải pháp ít phức tạp hơn, và tốt nhất là tự động toàn bộ quy trình để không cần phải thiết lập.</p>
+
+<p><strong>Mật khẩu bảo vệ cho file .zip</strong>: Phụ thuộc vào phần mềm mà bạn sử dụng để tạo ra file nén (.zip) mà có hoặc không có lựa chọn đặt mật khẩu cho tệp tin bên trong. Lựa chọn đó có thể hỗ trợ hoặc không hỗ trợ chuẩn mã hóa AES chất lượng cao. Và nếu không hỗ trợ AES thì bạn cũng không nên sử dụng chức năng đó bởi cơ chế mã hóa này rất dễ bị phá vỡ.</p>
+
+<p>Thật may là nhiều chương trình nén lại hỗ trợ chuẩn mã hóa AES và chúng tương thích với nhau. Những chương trình này bao gồm WinZip (dùng thử), và 7-Zip (nguồn mở, miễn phí). Trong khi đó, tính năng giải file nén tích hợp sẵn trong Windows lại không hỗ trợ AES. Cho dù chương nén mà bạn sử dụng là gì thì hãy chắc rằng chúng hỗ trợ AES.</p>
+
+<p><strong>Dịch vụ bảo vệ tin nhắn và gửi file</strong>: Trên thực tế, bạn không cần thiết phải gửi e-mail trong có chứa những thông tin, mà có thể upload file lên một website an toàn để cho người nhận download về. Trong số các website cung cấp tính năng này có https://www.sendinc.com/, hoàn toàn miễn phí và bạn thậm chí không cần phải chia sẻ mật khẩu với người nhận thư. Mỗi người đều có mật khẩu riêng và sử dụng chính mật khẩu đó để truy suất vào phần thông tin.</p>
+
+<p>Khi bạn đưa lên Sendinc một thông điệp, nó sẽ nhanh chóng thông báo cho người nhận thông qua e-mail. Người nhận thư sẽ cần lập một tài khoản miễn phí tại Sendinc để truy cập thông tin.</p>
+
+<p>Gia Vũ – (PCW)</p>
+]]></content>
+  </entry>
+  
+</feed>

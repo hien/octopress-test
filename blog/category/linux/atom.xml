@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | Mr.Hien's Blog]]></title>
+  <link href="http://mrhien.info/blog/category/linux/atom.xml" rel="self"/>
+  <link href="http://mrhien.info/"/>
+  <updated>2012-01-31T22:23:31+07:00</updated>
+  <id>http://mrhien.info/</id>
+  <author>
+    <name><![CDATA[Hien]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sử dụng Macro trong trình soạn thảo vim / vi (Phần 2)]]></title>
+    <link href="http://mrhien.info/blog/thu-thuat-linux-su-dung-macro-trong-vim-phan-2/"/>
+    <updated>2011-11-06T15:46:00+07:00</updated>
+    <id>http://mrhien.info/blog/su-dung-macro-trong-trinh-soan-thao-vim-slash-vi-phan-2</id>
+    <content type="html"><![CDATA[<p>Xem phần 1 <a href="/blog/thu-thuat-linux-su-dung-macro-trong-vim-phan-1/">tại đây</a></p>
+
+<p><strong>Ví dụ 2:</strong>  Tạo các câu truy vấn SQL (CREATE DATABASE) từ danh sách tên db có sẵn
+Ban đầu ta có tập tin “create-database.sql ” có nội dung như sau:</p>
+
+<!--more-->
+
+
+<p><img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_1.png" width="700" height="513" title="Vim Macro" >
+1. Ấn “qa”: để bắt đầu quá trình thu lại (record) macro
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_2.png" width="700" height="513" title="Vim Macro" >
+2. Ấn “I” : để chuyển sang chế độ Insert và dời con trỏ về ký tự đầu tiên của dòng
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_3.png" width="700" height="513" title="Vim Macro" >
+3. Gõ vào “CREATE DATABASE”
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_4.png" width="700" height="513" title="Vim Macro" >
+4. Ấn “Esc và A”: để duy chuyển đến cuối dòng hiện tại và gõ thêm ký tự “;”
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_5.png" width="700" height="513" title="Vim Macro" >
+5. Ấn “Esc và j”: để duy chuyển xuống dòng mới và ấn “q” để kết thúc quá trình thu lại (record) macro.
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_6.png" width="700" height="513" title="Vim Macro" >
+6. Thực thi macro bằng cách ấn “8@a” và kết quả thu được như dưới đây.
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_7.png" width="700" height="513" title="Vim Macro" >
+Chúc bạn thành công!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hệ điều hành Fedora 17 sẽ có tên mã “Beefy Miracle”]]></title>
+    <link href="http://mrhien.info/blog/fedora-17-se-co-ten-ma-beefy-miracle/"/>
+    <updated>2011-10-12T10:45:00+07:00</updated>
+    <id>http://mrhien.info/blog/he-dieu-hanh-fedora-17-se-co-ten-ma-beefy-miracle</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/its-a-beefy-miracle.png"></p>
+
+<p>Cộng đồng Fedora đã bầu chọn “Beefy Miracle” như là tên mã cho phiên bản <a href="/blog/tag/fedora-17/">Fedora 17</a>. Fedora 17 sẽ phát hành bản chính thức trong khoảng thời gian sáu tháng tính từ ngày Fedora 16 được phát hành (11/2011).</p>
+
+<p>Theo quy ước đặt tên cho các phiên bản Fedora, mỗi tên kế tiếp phải có một liên kết đến tên trước, nhưng liên kết phải là một kiểu khác nhau của liên kết để liên kết giữa hai cái tên trước đó. Fedora 16 (<a href="/blog/tag/verne/">Verne</a>) được đặt theo tên một nhà tương lai học (<a href="http://en.wikipedia.org/wiki/Futurologist">futurologist</a>). Với Fedora 17 (<a href="http://beefymiracle.org/">Beefy Miracle</a>) thì mối quan hệ là ” Beefy Miracle là tên được đề xuất bầu chọn cho Fedora 16 và Verne cũng thế”.</p>
+
+<p>“<a href="/blog/tag/beefy-miracle/">Beefy Miracle</a>” được bầu chọn với 1182 điểm, xem thêm kết quả bầu chọn <a href="https://lists.fedoraproject.org/pipermail/announce/2011-October/003002.html">tại đây</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sử dụng Macro trong trình soạn thảo vim / vi (Phần 1)]]></title>
+    <link href="http://mrhien.info/blog/thu-thuat-linux-su-dung-macro-trong-vim-phan-1/"/>
+    <updated>2011-07-17T17:08:00+07:00</updated>
+    <id>http://mrhien.info/blog/su-dung-macro-trong-trinh-soan-thao-vim-slash-vi-phan-1</id>
+    <content type="html"><![CDATA[<p>Sử dụng Macro trong vim/vi bạn có thể quay lại (record) và cho chạy lại (play) một chuỗi các hành động trong trình soạn thảo.</p>
+
+<p><strong>CÁC BƯỚC CHÍNH ĐỂ TẠO VÀ SỬ DỤNG MACRO TRONG VIM:</strong></p>
+
+<ol>
+<li><p>Bắt đầu quá trình ghi lại (record) bằng cách nhấn phím “q” và theo sau bởi kí tự để đặt tên cho macro.</p></li>
+<li><p>Thực hiện bất kì hành động nào bên trong trình soạn thảo sẽ được ghi lại (record).</p></li>
+<li><p>Dừng việc ghi lại (record) bằng cách nhấn phím “q”.</p></li>
+<li><p>Cho chạy lại (play) các hành động đã được ghi (record) bằng cách nhấn “@” theo sau là tên macro</p></li>
+<li><p>Để chạy lại macro với số lần lặp xác đinh bằng cách nhấn “NN@” theo sau là tên macro, với NN là một con số nguyên.</p></li>
+</ol>
+
+
+<p>Ví dụ 1: Tạo chuỗi số trong trình soạn thảo vim bằng cách sử dụng macro</p>
+
+<!--more-->
+
+
+<ol>
+<li>Tạo một tập tin mới (chuoi-so.txt) bằng cách chạy lệnh:
+<code>
+ vim chuoi-so.txt
+</code></li>
+<li>Chuyển sang chế độ soạn thảo bằng cách nhấn “i” và gõ chuỗi “1.” vào:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_1.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Bắt đầu quá trình ghi lại macro có tên là “a” bằng cách nhấn phím “qa”. Dòng chữ “recording” sẽ hiển thị trong vim/vi:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_2.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Nhấn phím “y” (2 lần) và theo sau bởi phím “p” để sao chép dòng hiện hành và dán dòng vừa mới sao chép được:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_3.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Nhấn phím Ctrl + A để tắng số lên 1 đơn vị tại con trỏ chuột hiện hành:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_4.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Kết thúc quá trình ghi lại (record) bằng cách nhấn phím “q” và dòng chữ “recording” đã biến mất:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_5.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Cho chạy lại macro với số lần xác định để tạo được chuỗi số 1..50 ở đầu mỗi dòng bằng cách nhấn “48@a” (NN là 48 vì ta có sẵn 2 dòng rồi)ta thu được kết quả sau:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_6.png" width="700" height="513" title="Vim Macro" >
+Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro trong trình soạn thảo vim (Phần 2)”.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cài đặt PostgreSQL 9 trên Fedora 15]]></title>
+    <link href="http://mrhien.info/blog/cai-dat-postgresql-9-tren-fedora-15/"/>
+    <updated>2011-06-18T20:57:00+07:00</updated>
+    <id>http://mrhien.info/blog/cai-dat-postgresql-9-tren-fedora-15</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/postgresql-object-rdms-logo.gif"></p>
+
+<p>Trên Fedora 15 có thể cài đặt PostgreSQL 9 qua Yum như sau:
+```</p>
+
+<pre><code>yum install postgresql-server
+</code></pre>
+
+<p><code>
+Khi cài đặt thành công chúng ta chạy tiếp lệnh sau để khởi tạo các cơ sở dữ liệu hệ thống ban đầu cho PostgreSQL:
+</code></p>
+
+<pre><code>/etc/init.d/postgresql initdb
+</code></pre>
+
+<p><code>
+Tiếp đến khởi chạy PostgreSQL Server bằng lệnh sau:
+</code></p>
+
+<pre><code>systemctl start postgresql.service
+</code></pre>
+
+<p>```
+Kiểm tra trạng thái dịch vụ xem chạy chưa ?</p>
+
+<!--more-->
+
+
+<p>```</p>
+
+<pre><code>[root@fedora15 ~]# systemctl status postgresql.service
+postgresql.service – LSB: start and stop PostgreSQL server
+Loaded: loaded (/etc/rc.d/init.d/postgresql)
+Active: active (running) since Sun, 19 Jun 2011 05:12:58 +0700; 2min 34s ago
+Process: 28703 ExecStart=/etc/rc.d/init.d/postgresql start (code=exited, status=0/SUCCESS)
+Main PID: 28727 (postmaster)
+CGroup: name=systemd:/system/postgresql.service
+├ 28727 /usr/bin/postmaster -p 5432 -D /var/lib/pgsql/data
+├ 28729 postgres: logger process
+├ 28731 postgres: writer process
+├ 28732 postgres: wal writer process
+├ 28733 postgres: autovacuum launcher process
+└ 28734 postgres: stats collector process
+</code></pre>
+
+<p><code>
+Sau đó tiến hành login để kiểm tra xem cài đặt đúng chưa?
+</code></p>
+
+<pre><code>[root@fedora15 ~]# su – postgres
+-bash-4.2$ psql
+psql (9.0.4)
+Type “help” for help.
+
+postgres=# SELECT VERSION();
+version
+—————————————————————————————————————
+PostgreSQL 9.0.4 on i386-redhat-linux-gnu, compiled by GCC gcc (GCC) 4.6.0 20110428 (Red Hat 4.6.0-6), 32-bit
+(1 row)
+
+postgres=#
+</code></pre>
+
+<p>```
+Chúc bạn thành công!.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cài đặt Apache Tomcat 7 trên Centos 5/RHEL 5]]></title>
+    <link href="http://mrhien.info/blog/cai-dat-apache-tomcat-7-tren-centos-5/"/>
+    <updated>2011-05-10T21:37:00+07:00</updated>
+    <id>http://mrhien.info/blog/cai-dat-apache-tomcat-7-tren-centos-5-slash-rhel-5</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/apache-tomcat-logo.jpg" title="Apache Tomcat 7" ></p>
+
+<p>Bài viết này sẽ hướng dẫn cài đặt Apache Tomcat 7 trên Centos 5. Thông tin về Apache Tomcat và những tính năng mới cũng như những cải thiện trong phiên bản 7 có thể tham khảo <a href="http://tomcat.apache.org/whichversion.html">tại đây</a>.</p>
+
+<p>Trong bài viết này chúng ta sẽ cài JDK, Apache Tomcat 7 và cấu hình Apache Tomcat tự động chạy lúc Centos khởi động cũng như cấu hình Apache Tomcat chạy dưới quyền người dùng (user) bình thường.</p>
+
+<p>Để bắt đầu chúng ta sẽ cài đặt JDK. Apache Tomcat 7 yêu cầu tối thiểu là JDK 1.6!</p>
+
+<!--more-->
+
+
+<p>Bước 1: Cài đặt JDK</p>
+
+<p>Có thể bỏ qua bước này nếu đã cài phiên JDK tối thiểu mà Apache Tomcat 7 yêu cầu.</p>
+
+<p>Chúng ta sẽ tiến hành tải JDK tại : <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">đây</a>. Chúng ta tải bản JDK mới nhất, vào thời điểm viết bài này bản JDK mới nhất là : JDK 6 Update 25, tùy vào phiên bản hệ điều hành đang sử dụng để chọn và tải JDK phù hợp. Ở đây do chúng ta đang sử dụng Centos 5 (32bit) nên chúng ta đã tải được bản tập tin : <code>jdk-6u25-linux-i586.bin</code> và lưu nó ở <code>/root/java/</code> bây giờ chúng ta sẽ tiến hành cài đặt JDK theo các bước sau :
+```
+[root@centos-server java]# mkdir /usr/java/</p>
+
+<p>[root@centos-server java]# cd /usr/java/</p>
+
+<p>[root@centos-server java]# sh /root/java/jdk-6u25-linux-i586.bin
+<code>
+Khi cài đặt thành công chúng ta sẽ nhận được kết quả tương tư như dưới đây:
+</code></p>
+
+<pre><code>Java(TM) SE Development Kit 6 successfully installed.
+
+Product Registration is FREE and includes many benefits:
+
+* Notification of new versions, patches, and updates
+
+* Special offers on Oracle products, services and training
+
+* Access to early releases and documentation
+
+Product and system data will be collected. If your configuration
+
+supports a browser, the JDK Product Registration form will
+
+be presented. If you do not register, none of this information
+
+will be saved. You may also register your JDK later by
+
+opening the register.html file (located in the JDK installation
+
+directory) in a browser.
+
+For more information on what data Registration collects and
+
+how it is managed and used, see:
+
+http://java.sun.com/javase/registration/JDKRegistrationPrivacy.html
+
+Press Enter to continue…..
+</code></pre>
+
+<p><code>
+Tiếp đến chúng ta sẽ tiến hành thiết lập biến môi trường JAVA_HOME:
+</code>
+[root@centos-server java]# JAVA_HOME=/usr/java/jdk1.6.0_25/</p>
+
+<p>[root@centos-server java]# export JAVA_HOME</p>
+
+<p>[root@centos-server java]# PATH=$JAVA_HOME/bin:$PATH</p>
+
+<p>[root@centos-server java]# export PATH
+<code>
+Để thiết lập biến JAVA_HOME cho người dùng vĩnh viễn chúng ta có thể thêm những trên vào tập tin ~/.bashrc hay ~/.bash_profile của người dùng và cũng có thể thêm vào /etc/profile để có hiệu lực cho tất cả người dùng. Kiểm tra lại bằng lệnh sau:
+</code>
+[root@centos-server java]# echo $JAVA_HOME</p>
+
+<p>/usr/java/jdk1.6.0_25/
+```
+Bước 2: Cài đặt Apache Tomcat</p>
+
+<p>Tải Apache Tomcat phiên bản 7 tại đây.</p>
+
+<p>Chúng ta đã tải và lưu Apache Tomcat 7 vào thư mục <code>/opt/</code>, kế tiếp chúng ta sẽ tiến hành giải nén tập tin Apache Tomcat vừa tải được:
+```
+[root@centos-server java]# cd /opt/</p>
+
+<p>[root@centos-server opt]# tar -xvf apache-tomcat-7.0.12.tar.gz
+<code>
+Kết thúc chúng giải nén được Apache Tomcat 7 nằm tại:</code>/opt/apache-tomcat-7.0.12/```</p>
+
+<p>Bước 3: Cấu hình Apache Tomcat chạy như một dịch vụ</p>
+
+<p>Để Apache Tomcat có thể dễ dàng Start, Stop, Restart và tự động chạy khi Centos khởi động nên chúng ta tạo đoạn init script như sau:
+```
+[root@centos-server opt]# vi /etc/init.d/tomcat</p>
+
+<pre><code>#!/bin/bash
+
+# description: Tomcat Start Stop Restart
+
+# processname: tomcat
+
+# chkconfig: 234 20 80
+
+JAVA_HOME=/usr/java/jdk1.6.0_25
+
+export JAVA_HOME
+
+PATH=$JAVA_HOME/bin:$PATH
+
+export PATH
+
+CATALINA_HOME=/opt/apache-tomcat-7.0.12
+
+case $1 in
+
+start)
+
+sh $CATALINA_HOME/bin/startup.sh
+
+;;
+
+stop)
+
+sh $CATALINA_HOME/bin/shutdown.sh
+
+;;
+
+restart)
+
+sh $CATALINA_HOME/bin/shutdown.sh
+
+sleep 1
+
+sh $CATALINA_HOME/bin/startup.sh
+
+;;
+
+esac
+
+exit 0
+</code></pre>
+
+<p><code>
+Trong đoạn script trên biến CATALINA_HOME phải trỏ về thư mục chứa Apache Tomcat</code>/opt/apache-tomcat-7.0.12/```</p>
+
+<p>Cấp quyền thực thi cho tập tin <code>/etc/init.d/tomcat</code> :
+<code>
+[root@centos-server opt]# chmod +x /etc/init.d/tomcat
+</code>
+Tiếp tục sử dụng công cụ chkconfig để cấu hình cho Tomcat chạy lúc Centos khởi động ( ở đây ví dụ Tomcat tự động chạy ở runlevel 2,3,4) :
+```
+[root@centos-server opt]# chkconfig –add tomcat</p>
+
+<p>[root@centos-server opt]# chkconfig –level 234 tomcat on
+<code>
+Kiểm tra lại:
+</code>
+[root@centos-server opt]# chkconfig –list tomcat</p>
+
+<pre><code>tomcat 0:off 1:off 2:on 3:on 4:on 5:off 6:off
+</code></pre>
+
+<p><code>
+Bây giờ chúng ta sẽ tiến hành Start Apache Tomcat:
+</code>
+[root@centos-server opt]# service tomcat start</p>
+
+<pre><code>Using CATALINA_BASE: /opt/apache-tomcat-7.0.12
+
+Using CATALINA_HOME: /opt/apache-tomcat-7.0.12
+
+Using CATALINA_TMPDIR: /opt/apache-tomcat-7.0.12/temp
+
+Using JRE_HOME: /usr/java/jdk1.6.0_25
+
+Using CLASSPATH: /opt/apache-tomcat-7.0.12/bin/bootstrap.jar:/opt/apache-tomcat-7.0.12/bin/tomcat-juli.jar
+</code></pre>
+
+<p><code>
+Chúng ta truy cập bằng HTTP vào cổng mặc định 8080 để kiếm tra (ví dụ</code>http://192.168.1.3:8080```). Nếu Apache Tomcat start thành công sẽ nhìn thấy tương tự như sau:
+<img class="center" src="http://mrhien.info/wp-content/uploads/tomcat7_install_success.png" width="700" height="414" title="tomcat" ></p>
+
+<p>Bước 4: Cấu hình truy cập Tomcat Manager</p>
+
+<p>Vì lí do bảo mật Apache Tomcat 7 không tạo sẵn bất kì người dùng và mật khẩu mặc định nào cho Tomcat Manager. Nếu như chúng ta muốn sử dụng thì chỉnh sửa nội dung tập tin $CATALINA_HOME/conf/tomcat-users.xml
+<code>
+[root@centos-server /]# vi /opt/apache-tomcat-7.0.12/conf/tomcat-users.xml
+</code>
+Nội dung tập tin <a href="http://mrhien.info/wp-content/uploads/tomcat_users.txt">tomcat-users.xml</a></p>
+
+<p>Với role “manager-gui” chúng ta có thể truy cập vào Manager App và Server Status như hình dưới đây:</p>
+
+<p><img class="center" src="http://mrhien.info/wp-content/uploads/tomcat_manager7.png" width="700" height="414" title="tomcat manager app" ></p>
+
+<p>Apache Tomcat 7 còn có các role khác như : admin-gui, admin-script…</p>
+
+<p>Khi chỉnh sửa tập tin tomcat-users.xml vui lòng restart Apache Tomcat lại để có hiệu lực.</p>
+
+<p>Bước 5: Cấu hình Apache Tomcat chạy dưới quyền người dùng bình thường</p>
+
+<p>Chúng ta tạo người dùng tên “tomcat” và gán quyển thư mục Apache Tomcat cho người dùng “tomcat”:
+```
+[root@centos-server /]# useradd -d /opt/apache-tomcat-7.0.12 tomcat</p>
+
+<p>[root@centos-server /]# chown -R tomcat:tomcat /opt/apache-tomcat-7.0.12/
+<code>
+Và tiến hành chỉnh sửa tập tin</code>/etc/init.d/tomcat<code>thành như sau:
+</code></p>
+
+<h1>!/bin/bash</h1>
+
+<h1>description: Tomcat Start Stop Restart</h1>
+
+<h1>processname: tomcat</h1>
+
+<h1>chkconfig: 234 20 80</h1>
+
+<p>JAVA_HOME=/usr/java/jdk1.6.0_25</p>
+
+<p>export JAVA_HOME</p>
+
+<p>PATH=$JAVA_HOME/bin:$PATH</p>
+
+<p>export PATH</p>
+
+<p>CATALINA_HOME=/opt/apache-tomcat-7.0.12</p>
+
+<p>case $1 in</p>
+
+<p>start)</p>
+
+<p>/bin/su tomcat $CATALINA_HOME/bin/startup.sh</p>
+
+<p>;;</p>
+
+<p>stop)</p>
+
+<p>/bin/su tomcat sh $CATALINA_HOME/bin/shutdown.sh</p>
+
+<p>;;</p>
+
+<p>restart)</p>
+
+<p>/bin/su tomcat sh $CATALINA_HOME/bin/shutdown.sh</p>
+
+<p>sleep 1</p>
+
+<p>/bin/su tomcat sh $CATALINA_HOME/bin/startup.sh</p>
+
+<p>;;</p>
+
+<p>esac</p>
+
+<p>exit 0</p>
+
+<p>```
+Bước 6: Cấu hình Apache Tomcat chạy cổng 80 với quyền người dùng bình thường</p>
+
+<p>Trong Linux để chạy cổng dưới 1024 thì cần quyền root tuy nhiên chúng ta có thể sử dụng iptables để giải quyển vấn đề này như sau:
+<code>
+[root@centos-server /]# iptables -t nat -A PREROUTING -p tcp -m tcp –dport 80 -j REDIRECT –to-ports 8080
+</code>
+Bài viết đến đây là kết thúc. Mọi đóng góp xin gửi về admin[at]mrhien[dot]info . Xin chân thành cảm ơn.</p>
+]]></content>
+  </entry>
+  
+</feed>

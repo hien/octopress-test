@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: OpenDNS | Mr.Hien's Blog]]></title>
+  <link href="http://mrhien.info/blog/category/opendns/atom.xml" rel="self"/>
+  <link href="http://mrhien.info/"/>
+  <updated>2012-01-31T22:23:31+07:00</updated>
+  <id>http://mrhien.info/</id>
+  <author>
+    <name><![CDATA[Hien]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[What is my public IP-address?]]></title>
+    <link href="http://mrhien.info/blog/what-is-my-public-ip-address/"/>
+    <updated>2010-08-15T15:14:00+07:00</updated>
+    <id>http://mrhien.info/blog/what-is-my-public-ip-address</id>
+    <content type="html"><![CDATA[<p>What is my public IP-address?</p>
+
+<p>Short command, easy to remember
+<code>
+dig +short @208.67.222.222 myip.opendns.com
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

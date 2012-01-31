@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Mr.Hien's Blog]]></title>
+  <link href="http://mrhien.info/atom.xml" rel="self"/>
+  <link href="http://mrhien.info/"/>
+  <updated>2012-01-31T22:23:31+07:00</updated>
+  <id>http://mrhien.info/</id>
+  <author>
+    <name><![CDATA[Hien]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sử dụng Macro trong trình soạn thảo vim / vi (Phần 2)]]></title>
+    <link href="http://mrhien.info/blog/thu-thuat-linux-su-dung-macro-trong-vim-phan-2/"/>
+    <updated>2011-11-06T15:46:00+07:00</updated>
+    <id>http://mrhien.info/blog/su-dung-macro-trong-trinh-soan-thao-vim-slash-vi-phan-2</id>
+    <content type="html"><![CDATA[<p>Xem phần 1 <a href="http://mrhien.info/blog/thu-thuat-linux-su-dung-macro-trong-vim-phan-1/">tại đây</a></p>
+
+<p><strong>Ví dụ 2:</strong>  Tạo các câu truy vấn SQL (CREATE DATABASE) từ danh sách tên db có sẵn
+Ban đầu ta có tập tin “create-database.sql ” có nội dung như sau:</p>
+
+<!--more-->
+
+
+<p><img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_1.png" width="700" height="513" title="Vim Macro" >
+1. Ấn “qa”: để bắt đầu quá trình thu lại (record) macro
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_2.png" width="700" height="513" title="Vim Macro" >
+2. Ấn “I” : để chuyển sang chế độ Insert và dời con trỏ về ký tự đầu tiên của dòng
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_3.png" width="700" height="513" title="Vim Macro" >
+3. Gõ vào “CREATE DATABASE”
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_4.png" width="700" height="513" title="Vim Macro" >
+4. Ấn “Esc và A”: để duy chuyển đến cuối dòng hiện tại và gõ thêm ký tự “;”
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_5.png" width="700" height="513" title="Vim Macro" >
+5. Ấn “Esc và j”: để duy chuyển xuống dòng mới và ấn “q” để kết thúc quá trình thu lại (record) macro.
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_6.png" width="700" height="513" title="Vim Macro" >
+6. Thực thi macro bằng cách ấn “8@a” và kết quả thu được như dưới đây.
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_7.png" width="700" height="513" title="Vim Macro" >
+Chúc bạn thành công!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hệ điều hành Fedora 17 sẽ có tên mã “Beefy Miracle”]]></title>
+    <link href="http://mrhien.info/blog/fedora-17-se-co-ten-ma-beefy-miracle/"/>
+    <updated>2011-10-12T10:45:00+07:00</updated>
+    <id>http://mrhien.info/blog/he-dieu-hanh-fedora-17-se-co-ten-ma-beefy-miracle</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/its-a-beefy-miracle.png"></p>
+
+<p>Cộng đồng Fedora đã bầu chọn “Beefy Miracle” như là tên mã cho phiên bản <a href="http://mrhien.info/blog/tag/fedora-17/">Fedora 17</a>. Fedora 17 sẽ phát hành bản chính thức trong khoảng thời gian sáu tháng tính từ ngày Fedora 16 được phát hành (11/2011).</p>
+
+<p>Theo quy ước đặt tên cho các phiên bản Fedora, mỗi tên kế tiếp phải có một liên kết đến tên trước, nhưng liên kết phải là một kiểu khác nhau của liên kết để liên kết giữa hai cái tên trước đó. Fedora 16 (<a href="http://mrhien.info/blog/tag/verne/">Verne</a>) được đặt theo tên một nhà tương lai học (<a href="http://en.wikipedia.org/wiki/Futurologist">futurologist</a>). Với Fedora 17 (<a href="http://beefymiracle.org/">Beefy Miracle</a>) thì mối quan hệ là ” Beefy Miracle là tên được đề xuất bầu chọn cho Fedora 16 và Verne cũng thế”.</p>
+
+<p>“<a href="http://mrhien.info/blog/tag/beefy-miracle/">Beefy Miracle</a>” được bầu chọn với 1182 điểm, xem thêm kết quả bầu chọn <a href="https://lists.fedoraproject.org/pipermail/announce/2011-October/003002.html">tại đây</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sử dụng Macro trong trình soạn thảo vim / vi (Phần 1)]]></title>
+    <link href="http://mrhien.info/blog/thu-thuat-linux-su-dung-macro-trong-vim-phan-1/"/>
+    <updated>2011-07-17T17:08:00+07:00</updated>
+    <id>http://mrhien.info/blog/su-dung-macro-trong-trinh-soan-thao-vim-slash-vi-phan-1</id>
+    <content type="html"><![CDATA[<p>Sử dụng Macro trong vim/vi bạn có thể quay lại (record) và cho chạy lại (play) một chuỗi các hành động trong trình soạn thảo.</p>
+
+<p><strong>CÁC BƯỚC CHÍNH ĐỂ TẠO VÀ SỬ DỤNG MACRO TRONG VIM:</strong></p>
+
+<ol>
+<li><p>Bắt đầu quá trình ghi lại (record) bằng cách nhấn phím “q” và theo sau bởi kí tự để đặt tên cho macro.</p></li>
+<li><p>Thực hiện bất kì hành động nào bên trong trình soạn thảo sẽ được ghi lại (record).</p></li>
+<li><p>Dừng việc ghi lại (record) bằng cách nhấn phím “q”.</p></li>
+<li><p>Cho chạy lại (play) các hành động đã được ghi (record) bằng cách nhấn “@” theo sau là tên macro</p></li>
+<li><p>Để chạy lại macro với số lần lặp xác đinh bằng cách nhấn “NN@” theo sau là tên macro, với NN là một con số nguyên.</p></li>
+</ol>
+
+
+<p>Ví dụ 1: Tạo chuỗi số trong trình soạn thảo vim bằng cách sử dụng macro</p>
+
+<!--more-->
+
+
+<ol>
+<li>Tạo một tập tin mới (chuoi-so.txt) bằng cách chạy lệnh:</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>vim chuoi-so.txt</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Chuyển sang chế độ soạn thảo bằng cách nhấn “i” và gõ chuỗi “1.” vào:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_1.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Bắt đầu quá trình ghi lại macro có tên là “a” bằng cách nhấn phím “qa”. Dòng chữ “recording” sẽ hiển thị trong vim/vi:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_2.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Nhấn phím “y” (2 lần) và theo sau bởi phím “p” để sao chép dòng hiện hành và dán dòng vừa mới sao chép được:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_3.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Nhấn phím Ctrl + A để tắng số lên 1 đơn vị tại con trỏ chuột hiện hành:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_4.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Kết thúc quá trình ghi lại (record) bằng cách nhấn phím “q” và dòng chữ “recording” đã biến mất:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_5.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Cho chạy lại macro với số lần xác định để tạo được chuỗi số 1..50 ở đầu mỗi dòng bằng cách nhấn “48@a” (NN là 48 vì ta có sẵn 2 dòng rồi)ta thu được kết quả sau:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_6.png" width="700" height="513" title="Vim Macro" >
+Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro trong trình soạn thảo vim (Phần 2)”.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cài đặt PostgreSQL 9 trên Fedora 15]]></title>
+    <link href="http://mrhien.info/blog/cai-dat-postgresql-9-tren-fedora-15/"/>
+    <updated>2011-06-18T20:57:00+07:00</updated>
+    <id>http://mrhien.info/blog/cai-dat-postgresql-9-tren-fedora-15</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/postgresql-object-rdms-logo.gif"></p>
+
+<p>Trên Fedora 15 có thể cài đặt PostgreSQL 9 qua Yum như sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum install postgresql-server</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Khi cài đặt thành công chúng ta chạy tiếp lệnh sau để khởi tạo các cơ sở dữ liệu hệ thống ban đầu cho PostgreSQL:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/etc/init.d/postgresql initdb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tiếp đến khởi chạy PostgreSQL Server bằng lệnh sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>systemctl start postgresql.service</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Kiểm tra trạng thái dịch vụ xem chạy chưa ?</p>
+
+<!--more-->
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@fedora15 ~]# systemctl status postgresql.service
+</span><span class='line'>postgresql.service – LSB: start and stop PostgreSQL server
+</span><span class='line'>Loaded: loaded (/etc/rc.d/init.d/postgresql)
+</span><span class='line'>Active: active (running) since Sun, 19 Jun 2011 05:12:58 +0700; 2min 34s ago
+</span><span class='line'>Process: 28703 ExecStart=/etc/rc.d/init.d/postgresql start (code=exited, status=0/SUCCESS)
+</span><span class='line'>Main PID: 28727 (postmaster)
+</span><span class='line'>CGroup: name=systemd:/system/postgresql.service
+</span><span class='line'>├ 28727 /usr/bin/postmaster -p 5432 -D /var/lib/pgsql/data
+</span><span class='line'>├ 28729 postgres: logger process
+</span><span class='line'>├ 28731 postgres: writer process
+</span><span class='line'>├ 28732 postgres: wal writer process
+</span><span class='line'>├ 28733 postgres: autovacuum launcher process
+</span><span class='line'>└ 28734 postgres: stats collector process</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sau đó tiến hành login để kiểm tra xem cài đặt đúng chưa?</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@fedora15 ~]# su – postgres
+</span><span class='line'>-bash-4.2$ psql
+</span><span class='line'>psql (9.0.4)
+</span><span class='line'>Type “help” for help.
+</span><span class='line'>
+</span><span class='line'>postgres=# SELECT VERSION();
+</span><span class='line'>version
+</span><span class='line'>—————————————————————————————————————
+</span><span class='line'>PostgreSQL 9.0.4 on i386-redhat-linux-gnu, compiled by GCC gcc (GCC) 4.6.0 20110428 (Red Hat 4.6.0-6), 32-bit
+</span><span class='line'>(1 row)
+</span><span class='line'>
+</span><span class='line'>postgres=#</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Chúc bạn thành công!.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cài đặt Apache Tomcat 7 trên Centos 5/RHEL 5]]></title>
+    <link href="http://mrhien.info/blog/cai-dat-apache-tomcat-7-tren-centos-5/"/>
+    <updated>2011-05-10T21:37:00+07:00</updated>
+    <id>http://mrhien.info/blog/cai-dat-apache-tomcat-7-tren-centos-5-slash-rhel-5</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/apache-tomcat-logo.jpg" title="Apache Tomcat 7" ></p>
+
+<p>Bài viết này sẽ hướng dẫn cài đặt Apache Tomcat 7 trên Centos 5. Thông tin về Apache Tomcat và những tính năng mới cũng như những cải thiện trong phiên bản 7 có thể tham khảo <a href="http://tomcat.apache.org/whichversion.html">tại đây</a>.</p>
+
+<p>Trong bài viết này chúng ta sẽ cài JDK, Apache Tomcat 7 và cấu hình Apache Tomcat tự động chạy lúc Centos khởi động cũng như cấu hình Apache Tomcat chạy dưới quyền người dùng (user) bình thường.</p>
+
+<p>Để bắt đầu chúng ta sẽ cài đặt JDK. Apache Tomcat 7 yêu cầu tối thiểu là JDK 1.6!</p>
+
+<!--more-->
+
+
+<p>Bước 1: Cài đặt JDK</p>
+
+<p>Có thể bỏ qua bước này nếu đã cài phiên JDK tối thiểu mà Apache Tomcat 7 yêu cầu.</p>
+
+<p>Chúng ta sẽ tiến hành tải JDK tại : <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">đây</a>. Chúng ta tải bản JDK mới nhất, vào thời điểm viết bài này bản JDK mới nhất là : JDK 6 Update 25, tùy vào phiên bản hệ điều hành đang sử dụng để chọn và tải JDK phù hợp. Ở đây do chúng ta đang sử dụng Centos 5 (32bit) nên chúng ta đã tải được bản tập tin : <code>jdk-6u25-linux-i586.bin</code> và lưu nó ở <code>/root/java/</code> bây giờ chúng ta sẽ tiến hành cài đặt JDK theo các bước sau :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server java]# mkdir /usr/java/
+</span><span class='line'>
+</span><span class='line'>[root@centos-server java]# cd /usr/java/
+</span><span class='line'>
+</span><span class='line'>[root@centos-server java]# sh /root/java/jdk-6u25-linux-i586.bin</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Khi cài đặt thành công chúng ta sẽ nhận được kết quả tương tư như dưới đây:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Java(TM) SE Development Kit 6 successfully installed.
+</span><span class='line'>
+</span><span class='line'>Product Registration is FREE and includes many benefits:
+</span><span class='line'>
+</span><span class='line'>* Notification of new versions, patches, and updates
+</span><span class='line'>
+</span><span class='line'>* Special offers on Oracle products, services and training
+</span><span class='line'>
+</span><span class='line'>* Access to early releases and documentation
+</span><span class='line'>
+</span><span class='line'>Product and system data will be collected. If your configuration
+</span><span class='line'>
+</span><span class='line'>supports a browser, the JDK Product Registration form will
+</span><span class='line'>
+</span><span class='line'>be presented. If you do not register, none of this information
+</span><span class='line'>
+</span><span class='line'>will be saved. You may also register your JDK later by
+</span><span class='line'>
+</span><span class='line'>opening the register.html file (located in the JDK installation
+</span><span class='line'>
+</span><span class='line'>directory) in a browser.
+</span><span class='line'>
+</span><span class='line'>For more information on what data Registration collects and
+</span><span class='line'>
+</span><span class='line'>how it is managed and used, see:
+</span><span class='line'>
+</span><span class='line'>http://java.sun.com/javase/registration/JDKRegistrationPrivacy.html
+</span><span class='line'>
+</span><span class='line'>Press Enter to continue…..</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tiếp đến chúng ta sẽ tiến hành thiết lập biến môi trường JAVA_HOME:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server java]# JAVA_HOME=/usr/java/jdk1.6.0_25/
+</span><span class='line'>
+</span><span class='line'>[root@centos-server java]# export JAVA_HOME
+</span><span class='line'>
+</span><span class='line'>[root@centos-server java]# PATH=$JAVA_HOME/bin:$PATH
+</span><span class='line'>
+</span><span class='line'>[root@centos-server java]# export PATH</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Để thiết lập biến JAVA_HOME cho người dùng vĩnh viễn chúng ta có thể thêm những trên vào tập tin ~/.bashrc hay ~/.bash_profile của người dùng và cũng có thể thêm vào /etc/profile để có hiệu lực cho tất cả người dùng. Kiểm tra lại bằng lệnh sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server java]# echo $JAVA_HOME
+</span><span class='line'>
+</span><span class='line'>/usr/java/jdk1.6.0_25/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Bước 2: Cài đặt Apache Tomcat</p>
+
+<p>Tải Apache Tomcat phiên bản 7 tại đây.</p>
+
+<p>Chúng ta đã tải và lưu Apache Tomcat 7 vào thư mục <code>/opt/</code>, kế tiếp chúng ta sẽ tiến hành giải nén tập tin Apache Tomcat vừa tải được:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server java]# cd /opt/
+</span><span class='line'>
+</span><span class='line'>[root@centos-server opt]# tar -xvf apache-tomcat-7.0.12.tar.gz</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Kết thúc chúng giải nén được Apache Tomcat 7 nằm tại: <code>/opt/apache-tomcat-7.0.12/</code></p>
+
+<p>Bước 3: Cấu hình Apache Tomcat chạy như một dịch vụ</p>
+
+<p>Để Apache Tomcat có thể dễ dàng Start, Stop, Restart và tự động chạy khi Centos khởi động nên chúng ta tạo đoạn init script như sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# vi /etc/init.d/tomcat
+</span><span class='line'>
+</span><span class='line'>    #!/bin/bash
+</span><span class='line'>
+</span><span class='line'>    # description: Tomcat Start Stop Restart
+</span><span class='line'>
+</span><span class='line'>    # processname: tomcat
+</span><span class='line'>
+</span><span class='line'>    # chkconfig: 234 20 80
+</span><span class='line'>
+</span><span class='line'>    JAVA_HOME=/usr/java/jdk1.6.0_25
+</span><span class='line'>
+</span><span class='line'>    export JAVA_HOME
+</span><span class='line'>
+</span><span class='line'>    PATH=$JAVA_HOME/bin:$PATH
+</span><span class='line'>
+</span><span class='line'>    export PATH
+</span><span class='line'>
+</span><span class='line'>    CATALINA_HOME=/opt/apache-tomcat-7.0.12
+</span><span class='line'>
+</span><span class='line'>    case $1 in
+</span><span class='line'>
+</span><span class='line'>    start)
+</span><span class='line'>
+</span><span class='line'>    sh $CATALINA_HOME/bin/startup.sh
+</span><span class='line'>
+</span><span class='line'>    ;;
+</span><span class='line'>
+</span><span class='line'>    stop)
+</span><span class='line'>
+</span><span class='line'>    sh $CATALINA_HOME/bin/shutdown.sh
+</span><span class='line'>
+</span><span class='line'>    ;;
+</span><span class='line'>
+</span><span class='line'>    restart)
+</span><span class='line'>
+</span><span class='line'>    sh $CATALINA_HOME/bin/shutdown.sh
+</span><span class='line'>
+</span><span class='line'>    sleep 1
+</span><span class='line'>
+</span><span class='line'>    sh $CATALINA_HOME/bin/startup.sh
+</span><span class='line'>
+</span><span class='line'>    ;;
+</span><span class='line'>
+</span><span class='line'>    esac
+</span><span class='line'>
+</span><span class='line'>    exit 0</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Trong đoạn script trên biến CATALINA_HOME phải trỏ về thư mục chứa Apache Tomcat <code>/opt/apache-tomcat-7.0.12/</code></p>
+
+<p>Cấp quyền thực thi cho tập tin <code>/etc/init.d/tomcat</code> :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# chmod +x /etc/init.d/tomcat</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tiếp tục sử dụng công cụ chkconfig để cấu hình cho Tomcat chạy lúc Centos khởi động ( ở đây ví dụ Tomcat tự động chạy ở runlevel 2,3,4) :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# chkconfig –add tomcat
+</span><span class='line'>
+</span><span class='line'>[root@centos-server opt]# chkconfig –level 234 tomcat on</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Kiểm tra lại:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# chkconfig –list tomcat
+</span><span class='line'>
+</span><span class='line'>    tomcat 0:off 1:off 2:on 3:on 4:on 5:off 6:off</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Bây giờ chúng ta sẽ tiến hành Start Apache Tomcat:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# service tomcat start
+</span><span class='line'>
+</span><span class='line'>    Using CATALINA_BASE: /opt/apache-tomcat-7.0.12
+</span><span class='line'>
+</span><span class='line'>    Using CATALINA_HOME: /opt/apache-tomcat-7.0.12
+</span><span class='line'>
+</span><span class='line'>    Using CATALINA_TMPDIR: /opt/apache-tomcat-7.0.12/temp
+</span><span class='line'>
+</span><span class='line'>    Using JRE_HOME: /usr/java/jdk1.6.0_25
+</span><span class='line'>
+</span><span class='line'>    Using CLASSPATH: /opt/apache-tomcat-7.0.12/bin/bootstrap.jar:/opt/apache-tomcat-7.0.12/bin/tomcat-juli.jar</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Chúng ta truy cập bằng HTTP vào cổng mặc định 8080 để kiếm tra (ví dụ <code>http://192.168.1.3:8080</code>). Nếu Apache Tomcat start thành công sẽ nhìn thấy tương tự như sau:
+<img class="center" src="http://mrhien.info/wp-content/uploads/tomcat7_install_success.png" width="700" height="414" title="tomcat" ></p>
+
+<p>Bước 4: Cấu hình truy cập Tomcat Manager</p>
+
+<p>Vì lí do bảo mật Apache Tomcat 7 không tạo sẵn bất kì người dùng và mật khẩu mặc định nào cho Tomcat Manager. Nếu như chúng ta muốn sử dụng thì chỉnh sửa nội dung tập tin $CATALINA_HOME/conf/tomcat-users.xml</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server /]# vi /opt/apache-tomcat-7.0.12/conf/tomcat-users.xml</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Nội dung tập tin <a href="http://mrhien.info/wp-content/uploads/tomcat_users.txt">tomcat-users.xml</a></p>
+
+<p>Với role “manager-gui” chúng ta có thể truy cập vào Manager App và Server Status như hình dưới đây:</p>
+
+<p><img class="center" src="http://mrhien.info/wp-content/uploads/tomcat_manager7.png" width="700" height="414" title="tomcat manager app" ></p>
+
+<p>Apache Tomcat 7 còn có các role khác như : admin-gui, admin-script…</p>
+
+<p>Khi chỉnh sửa tập tin tomcat-users.xml vui lòng restart Apache Tomcat lại để có hiệu lực.</p>
+
+<p>Bước 5: Cấu hình Apache Tomcat chạy dưới quyền người dùng bình thường</p>
+
+<p>Chúng ta tạo người dùng tên “tomcat” và gán quyển thư mục Apache Tomcat cho người dùng “tomcat”:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server /]# useradd -d /opt/apache-tomcat-7.0.12 tomcat
+</span><span class='line'>
+</span><span class='line'>[root@centos-server /]# chown -R tomcat:tomcat /opt/apache-tomcat-7.0.12/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Và tiến hành chỉnh sửa tập tin <code>/etc/init.d/tomcat</code> thành như sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/bash
+</span><span class='line'>
+</span><span class='line'># description: Tomcat Start Stop Restart
+</span><span class='line'>
+</span><span class='line'># processname: tomcat
+</span><span class='line'>
+</span><span class='line'># chkconfig: 234 20 80
+</span><span class='line'>
+</span><span class='line'>JAVA_HOME=/usr/java/jdk1.6.0_25
+</span><span class='line'>
+</span><span class='line'>export JAVA_HOME
+</span><span class='line'>
+</span><span class='line'>PATH=$JAVA_HOME/bin:$PATH
+</span><span class='line'>
+</span><span class='line'>export PATH
+</span><span class='line'>
+</span><span class='line'>CATALINA_HOME=/opt/apache-tomcat-7.0.12
+</span><span class='line'>
+</span><span class='line'>case $1 in
+</span><span class='line'>
+</span><span class='line'>start)
+</span><span class='line'>
+</span><span class='line'>/bin/su tomcat $CATALINA_HOME/bin/startup.sh
+</span><span class='line'>
+</span><span class='line'>;;
+</span><span class='line'>
+</span><span class='line'>stop)
+</span><span class='line'>
+</span><span class='line'>/bin/su tomcat sh $CATALINA_HOME/bin/shutdown.sh
+</span><span class='line'>
+</span><span class='line'>;;
+</span><span class='line'>
+</span><span class='line'>restart)
+</span><span class='line'>
+</span><span class='line'>/bin/su tomcat sh $CATALINA_HOME/bin/shutdown.sh
+</span><span class='line'>
+</span><span class='line'>sleep 1
+</span><span class='line'>
+</span><span class='line'>/bin/su tomcat sh $CATALINA_HOME/bin/startup.sh
+</span><span class='line'>
+</span><span class='line'>;;
+</span><span class='line'>
+</span><span class='line'>esac
+</span><span class='line'>
+</span><span class='line'>exit 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Bước 6: Cấu hình Apache Tomcat chạy cổng 80 với quyền người dùng bình thường</p>
+
+<p>Trong Linux để chạy cổng dưới 1024 thì cần quyền root tuy nhiên chúng ta có thể sử dụng iptables để giải quyển vấn đề này như sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server /]# iptables -t nat -A PREROUTING -p tcp -m tcp –dport 80 -j REDIRECT –to-ports 8080</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Bài viết đến đây là kết thúc. Mọi đóng góp xin gửi về admin[at]mrhien[dot]info . Xin chân thành cảm ơn.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hệ điều hành Fedora 16 sẽ có tên mã “Verne”]]></title>
+    <link href="http://mrhien.info/blog/fedora-16-se-co-ten-ma-verne/"/>
+    <updated>2011-04-12T23:44:00+07:00</updated>
+    <id>http://mrhien.info/blog/he-dieu-hanh-fedora-16-se-co-ten-ma-verne</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/fedora-logo.png"></p>
+
+<p>Cộng đồng Fedora đã bầu chọn “<a href="http://mrhien.info/blog/tag/verne/">Verne</a>” như là tên mã cho phiên bản <a href="http://mrhien.info/blog/tag/fedora-16/">Fedora 16</a>. Fedora 16 sẽ phát hành bản Final trong khoảng thời gian sáu tháng tính từ ngày Fedora 15 được phát hành (24/05/2011).</p>
+
+<p>Theo quy ước đặt tên cho các phiên bản Fedora, mỗi tên kế tiếp phải có một liên kết đến tên trước, nhưng liên kết phải là một kiểu khác nhau của liên kết để liên kết giữa hai cái tên trước đó. Fedora 15 (Lovelock) được đặt theo tên 2 thành phố ở Nevada. Với Fedora 16 (Verne) thì mối quan hệ là <a href="http://en.wikipedia.org/wiki/Jules_Verne">Jules Verne</a> và <a href="http://en.wikipedia.org/wiki/James_Lovelock">James Lovelock</a> đều là nhà tương lai học (<a href="http://en.wikipedia.org/wiki/Futurologist">futurologist</a>).</p>
+
+<p>“Verne”  được bầu chọn với <a href="https://admin.fedoraproject.org/voting/results/relnamef16?_csrf_token=2179da3024783957896b95f599e6282df66be713">2204</a> điểm, xem thêm kết quả bầu chọn <a href="http://lists.fedoraproject.org/pipermail/announce/2011-April/002948.html">tại đây</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mã hóa tập tin với OpenSSL]]></title>
+    <link href="http://mrhien.info/blog/thu-thuat-linux-ma-hoa-tap-tin-voi-openssl/"/>
+    <updated>2011-01-22T18:46:00+07:00</updated>
+    <id>http://mrhien.info/blog/ma-hoa-tap-tin-voi-openssl</id>
+    <content type="html"><![CDATA[<p>Lệnh đơn giản để mã hóa tập tin với OpenSSL là:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> openssl aes-256-cbc -a -salt -in quantrong.txt -out quantrong.txt.enc</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Trong đó:</li>
+</ul>
+
+
+<!--more-->
+
+
+<p>aes-256-cbc : <a href="http://en.wikipedia.org/wiki/Cipher">encryption cipher</a> được sử dụng đễ mã hóa.</p>
+
+<p>-a : xuất kết quả đã mã hóa dưới dạn base64 encoded.</p>
+
+<p>-<a href="http://en.wikipedia.org/wiki/Salt_(cryptography">salt</a>): thêm độ mạnh mã hóa</p>
+
+<p>-in quantrong.txt : đường dẫn tập tin cần mã hóa</p>
+
+<p>-out quantrong.txt.enc : đường dẫn để lưu tập tin đã được mã hóa</p>
+
+<p>Khi lệnh trên được thực thi OpenSSL sẽ hỏi mật khẩu để mã hóa.</p>
+
+<p>Để giải mã tập tin đã mã hóa sử dụng lệnh sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>openssl aes-256-cbc -d -a -in quantrong.txt.enc -out quantrong.txt.new</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Trong đó:</li>
+</ul>
+
+
+<p>-d : ra lệnh cho OpenSSL giải mã tập tin</p>
+
+<p>-a : thông báo cho OpenSSL dữ liệu đầu vào ở trong dạng base64 encoded</p>
+
+<p>Các thông số khác tương tự câu lệnh mã hóa trên.
+OpenSSL sẽ hỏi mật khẩu đã dùng mã hóa để giải mã tập tin. Sau khi giải mã thu được tập tin quantrong.txt.new (theo ví dụ trên)
+Tham khảo thêm các tính năng của OpenSSL <a href="http://www.openssl.org/docs/apps/openssl.html">tại đây</a>
+Chúc các bạn thành công!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Thiết lập mật khẩu cho Single user mode trong FreeBSD]]></title>
+    <link href="http://mrhien.info/blog/thiet-lap-mat-khau-single-user-mode-trong-freebsd/"/>
+    <updated>2011-01-03T11:53:00+07:00</updated>
+    <id>http://mrhien.info/blog/thiet-lap-mat-khau-cho-single-user-mode-trong-freebsd</id>
+    <content type="html"><![CDATA[<p>Mặc định khi khởi động vào single user mode trong <a href="http://mrhien.info/blog/category/freebsd/">FreeBSD</a>thì không cần mật khẩu. Tuy nhiên có thể thiết lập mật khẩu cho single user mode trong FreeBSD như sau:
+- Sử dụng 1 trình soạn thảo văn bản quen thuộc như vi để chỉnh sửa tập tin /etc/ttys</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>vi /etc/ttys</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Tìm dòng văn bản sau:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>console none unknown off secure</span></code></pre></td></tr></table></div></figure>
+
+
+<p>và chỉnh sửa thành:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>console none unknown off insecure</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lưu lại và thoát trình soạn thảo vi !
+Lưu ý: từ khóa insecure (tạm dịch là không an toàn) có nghĩa ngụ ý là console không an toàn phải xác thực bằng mật khẩu.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vô hiệu hóa ping response trong Linux]]></title>
+    <link href="http://mrhien.info/blog/vo-hieu-hoa-ping-response-trong-linux/"/>
+    <updated>2010-12-15T22:32:00+07:00</updated>
+    <id>http://mrhien.info/blog/vo-hieu-hoa-ping-response-trong-linux</id>
+    <content type="html"><![CDATA[<p>Ngoài chặn <a href="http://mrhien.info/blog/tag/icmp/">ping</a> response bằng <a href="http://mrhien.info/blog/tag/iptables">iptables</a>, chúng ta còn có thể vô hiệu hóa ping response bằng câu lệnh sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Và có thể kích hoạt lại ping response bằng lệnh sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo 0 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Chúc bạn thành công!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cấm IP bằng cách sử dụng null route trong Linux]]></title>
+    <link href="http://mrhien.info/blog/block-ip-using-null-route-in-linux/"/>
+    <updated>2010-12-12T20:47:00+07:00</updated>
+    <id>http://mrhien.info/blog/cam-ip-bang-cach-su-dung-null-route-trong-linux</id>
+    <content type="html"><![CDATA[<p>Để cấm 1 IP hoặc 1 dãy IP truy cập đến hệ thống Linux thì có thể sử dụng <a href="http://mrhien.info/blog/tag/iptables/">Iptables</a>.  Tuy nhiên chúng ta sử dụng phương pháp null route để làm được điều đó. <a href="http://en.wikipedia.org/wiki/Null_route">Null route</a> còn được gọi là blackhole route, hoạt động của null route giống như một tường lửa bị giới hạn.</p>
+
+<p>Ví dụ: Giả sử IP 123.20.1.7 là IP cần cấm:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>route add 123.20.1.7 gw 127.0.0.1 lo</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Có thể kiểm tra lại bằng lệnh sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>netstat -nr</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hoặc</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>route -n</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Để loại bỏ IP đã bị cấm:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>route delete 123.20.1.7</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Chúc bạn thành công!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Khắc phục lỗi ‘/bin/rm: Argument list too long’ khi xóa file trong Linux]]></title>
+    <link href="http://mrhien.info/blog/khac-phuc-loi-binrm-argument-list-too-long-khi-xoa-file-trong-linux/"/>
+    <updated>2010-11-25T18:37:00+07:00</updated>
+    <id>http://mrhien.info/blog/khac-phuc-loi-slash-bin-slash-rm-argument-list-too-long-khi-xoa-file-trong-linux</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/linux-doctor.png"></p>
+
+<p>Trong linux, khi xóa rất nhiều file trong thư mục hiện tại bằng câu lệnh: <code>rm -fr *</code> thường sẽ xuất hiện lỗi <a href="http://mrhien.info/blog/khac-phuc-loi-binrm-argument-list-too-long-khi-xoa-file-trong-linux/">-bash: /bin/rm: Argument list too long </a>. Do danh sách file để xóa quá dài. Khắc phục lỗi này bằng sự kết hợp find, xargs, rm lại với nhau như ví dụ dưới đây.</p>
+
+<p>Ví dụ:</p>
+
+<p>Mình đang cần xóa các file session của php tạo ra ở thư mục <em>/tmp/php/session/</em> nhưng khi xóa với <code>rm -fr *</code> sẽ sinh ra lỗi và  khắc phục như sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@vps-222-255-239-165 php]# cd session/
+</span><span class='line'>[root@vps-222-255-239-165 session]# rm -fr *
+</span><span class='line'>-bash: /bin/rm: Argument list too long
+</span><span class='line'>[root@vps-222-255-239-165 session]# find . -type f -print0 | xargs -0 /bin/rm </span></code></pre></td></tr></table></div></figure>
+
+
+<p>Chúc các bạn thành công!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hệ điều hành Fedora 15 sẽ có tên mã Lovelock]]></title>
+    <link href="http://mrhien.info/blog/fedora-15-se-co-ten-ma-lovelock/"/>
+    <updated>2010-11-06T15:50:00+07:00</updated>
+    <id>http://mrhien.info/blog/he-dieu-hanh-fedora-15-se-co-ten-ma-lovelock</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/fedora-logo.png"></p>
+
+<p>Cộng đồng Fedora đã chọn “<a href="http://mrhien.info/blog/tag/lovelock/[">Lovelock</a>” như là tên mã phiên bản Fedora 15. Fedora 15 sẽ phát hành bản Final trong khoảng thời gian sáu tháng tính từ ngày Fedora 14 được phát hành (02/11/2010).</p>
+
+<p>Theo quy ước đặt tên cho các phiên bản Fedora, mỗi tên kế tiếp phải có một liên kết đến tên trước, nhưng liên kết phải là một kiểu khác nhau của liên kết để liên kết giữa hai cái tên trước đó. Fedora 14 Laughlin được đặt theo tên nhà vật lý Robert B. Laughlin mà liên kết với các Goddard trước khi cả hai đều là tên của nhà vật lý. Rõ ràng mối liên hệ giữa Lovelock và Laughlin là cả hai đều là tên của các thành phố ở <a href="http://en.wikipedia.org/wiki/Nevada">Nevada</a>.</p>
+
+<p>Cuộc bỏ phiếu đã được chia khá đều giữa các năm lựa chọn hàng đầu của Lovelock, Asturias, Blarney, Sturgis và Pushcart, với Lovelock vượt qua Asturias với 729 phiếu so với 701.</p>
+
+<p>Xem thêm kết quả bầu chọn <a href="http://lists.fedoraproject.org/pipermail/announce/2010-November/002878.html">tại đây</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cấm 1 người dùng tạo kết nối ra ngoài bằng Iptables trên Linux!]]></title>
+    <link href="http://mrhien.info/blog/cam-1-nguoi-dung-tao-ket-noi-ra-ngoai-bang-iptables-tren-linux/"/>
+    <updated>2010-11-05T16:57:00+07:00</updated>
+    <id>http://mrhien.info/blog/cam-1-nguoi-dung-tao-ket-noi-ra-ngoai-bang-iptables-tren-linux</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/firewall.png"></p>
+
+<p>Iptables có 1 module gọi là “owner” (ipt_owner cho kernel &lt;2.6.25 và xt_owner cho kernel >=2.6.25) cho phép người quản trị có thể cấm 1 người dụng nhất định trên hệ thống cục bộ  tạo kết nối ra ngoài. Module “owner” chỉ hợp lệ trong chain OUTPUT và POSTROUTING của iptables. Sau đây là cú pháp:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>iptables -A OUTPUT -o ethX -m owner –uid-owner {USERNAME} -j DROP|REJECT</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ví dụ: Muốn cấm người dụng có tên là “jenny” có user id là 505 thì rule iptables sẽ như sau:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>iptables -A OUTPUT -m owner –uid-owner jenny -j DROP</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Hoặc:</p>
+
+<!--more-->
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>iptables -A OUTPUT -m owner –uid-owner 505 -j DROP</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Tham số: “uid-owner” : thì sử dụng username hoặc userid đều được.
+Cuối cùng nhớ lưu rules iptables lại!
+(Ví dụ trên được thực hiện trên Centos 5.5)</p>
+
+<p>Chúc bạn thành công !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sử dụng Google URL Shortener từ bash shell]]></title>
+    <link href="http://mrhien.info/blog/su-dung-google-url-shortener-tu-bash-shell/"/>
+    <updated>2010-10-31T13:34:00+07:00</updated>
+    <id>http://mrhien.info/blog/su-dung-google-url-shortener-tu-bash-shell</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/url_shortener_logo.gif" title="Google URL Shortener" ></p>
+
+<p>Bạn đang làm việc trong môi trường dòng lệnh của linux? Nhưng bạn muốn sử dụng <a href="http://goo.gl/">dịch vụ rút gọn URL của Google?</a> Với curl trong linux có thể làm được điều đó. Tuy nhiên khá phức tạp, nên định nghĩa hàm trong bash như sau để tiện sử dụng lại nhiều lần:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>googl () { curl -s -d “url=${1}” http://goo.gl/api/url |\
+</span><span class='line'>sed -e ‘s/{“short_url”:”//’ -e ‘s/”,”added_to_history”:false}/\n/’ ;} </span></code></pre></td></tr></table></div></figure>
+
+
+<p>Để có sử dụng hàm này lại trong lần đăng nhập kế tiếp bạn phải thêm dòng định nghĩa hàm trên vào tập tin ~/.bashrc
+Khi bạn muốn sử dụng chỉ gần gọi :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>googl [địa chỉ url cần rút gọn]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ví dụ: Bạn muốn rút gọn url <a href="http://mrhien.info/">http://mrhien.info</a> bạn sẽ làm như sau</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>googl http://mrhien.info</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Kết quả trả về là : <a href="http://goo.gl/5vVh">http://goo.gl/5vVh</a>
+Chúc bạn thành công!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sử dụng ImageMagick để xoay(ROTATE) ảnh trong Linux]]></title>
+    <link href="http://mrhien.info/blog/su-dung-imagemagick-de-xoay-rotate-anh-trong-linux/"/>
+    <updated>2010-10-24T13:43:00+07:00</updated>
+    <id>http://mrhien.info/blog/su-dung-imagemagick-de-xoay-rotate-anh-trong-linux</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/Imagemagick-logo.png" title="ImageMagick" ></p>
+
+<p>Sử dụng ImageMagick để xoay(ROTATE) ảnh trong Linux
+- Cài đặt ImageMagick:
++ Với RHEL/CentOS:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>yum install ImageMagick</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Với Ubuntu:</li>
+</ul>
+
+
+<!-- more -->
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
+</span><span class='line'>sudo apt-get install imagemagick --fix-missing</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Ví dụ: Xoay ảnh 90 độ
+Với “freebsdvn_logo.png” là tập tin ảnh cần xoay 90 độ và “freebsdvn_logo_90.png” là tập tin đã xoay 90 độ</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>convert -rotate 90 freebsdvn_logo.png freebsdvn_logo_90.png</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://vi.wikipedia.org/wiki/ImageMagick">Tìm hiểu thêm về ImageMagick</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tạo đoạn hash md5 của 1 chuỗi kí tự trong Linux!]]></title>
+    <link href="http://mrhien.infoblog/generate-an-md5-hash/"/>
+    <updated>2010-10-17T21:11:00+07:00</updated>
+    <id>http://mrhien.infoblog/tao-doan-hash-md5-cua-1-chuoi-ki-tu-trong-linux</id>
+    <content type="html"><![CDATA[<ul>
+<li>Cách 1: Sử dụng OpenSSL:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo -n 'Hello! I am from Mr.Hien' | openssl md5</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Cách 2: Sử dụng md5sum:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo -n 'Hello! I am from Mr.Hien' | md5sum -</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Cách 3: Sử dụng php:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>php -r 'echo md5("Hello! I am from Mr.Hien") . "\n";'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Trên đây là những cách phổ biến. Ngoài ra còn nhiều cách để tạo hash md5 trong linux nữa!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mount tập tin .iso trong Unix/Linux]]></title>
+    <link href="http://mrhien.info/blog/mount-tap-tin-iso-trong-unix-slash-linux/"/>
+    <updated>2010-10-10T12:47:00+07:00</updated>
+    <id>http://mrhien.info/blog/mount-tap-tin-iso-trong-unix-slash-linux</id>
+    <content type="html"><![CDATA[<p>Mount tập tin .iso trong Unix/Linux</p>
+
+<p>Với  ‘Michael_Jackson.iso’ là đường dẫn tới tập tin .iso cần mount và /mnt/music là mount point!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mount -o loop -t iso9660 Michael_Jackson.iso /mnt/music</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Tạo tập tin ảnh (.iso) của đĩa CD/DVD trong Unix/Linux]]></title>
+    <link href="http://mrhien.infoblog/tao-tap-tin-anh-iso-cua-dia-cd-dvd-trong-linux-unix/"/>
+    <updated>2010-10-10T12:39:00+07:00</updated>
+    <id>http://mrhien.infoblog/tao-tap-tin-anh-dot-iso-cua-dia-cd-slash-dvd-trong-unix-slash-linux</id>
+    <content type="html"><![CDATA[<p>Tạo tập tin ảnh (.iso) của đĩa CD/DVD trong Unix/Linux:
+Với ‘Michael_Jackson.iso’ là tên tập tin ảnh cần lưu.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>dd if=/dev/cdrom of=Michael_Jackson.iso</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Chuyển đổi tập tin ảnh của chương trình Nero thành tập tin .ISO!]]></title>
+    <link href="http://mrhien.infoblog/convert-a-nero-image-file-to-iso"/>
+    <updated>2010-10-10T10:21:00+07:00</updated>
+    <id>http://mrhien.infoblog/chuyen-doi-tap-tin-anh-cua-chuong-trinh-nero-thanh-tap-tin-iso</id>
+    <content type="html"><![CDATA[<p>Chuyển đổi tập tin ảnh của chương trình Nero thành tập tin .ISO:
+Với ‘Michael_Jackson.nrg’ đường dẫn tới tập tin ảnh của Nero cần chuyển.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>dd bs=1k if=Michael_Jackson.nrg of=Michael_Jackson.iso skip=300</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Thi miễn phí chứng chỉ IPv6]]></title>
+    <link href="http://mrhien.info/blog/thi-mien-phi-chung-chi-ipv6/"/>
+    <updated>2010-10-01T14:40:00+07:00</updated>
+    <id>http://mrhien.info/blog/thi-mien-phi-chung-chi-ipv6</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://ipv6.he.net/certification/create_badge.php?pass_name=phanquochien&badge=2" title="IPv6 Certificate" ></p>
+
+<p>Hurricane Electric đang tổ chức thi chứng chỉ IPv6 miễn phí tại địa chỉ <a href="http://ipv6.he.net/certification/">http://ipv6.he.net/certification/</a>.
+Các câu hỏi  sẽ và yêu cầu chú trọng vào các phần sau:</p>
+
+<!-- more -->
+
+
+<p><strong><strong><strong> - Chứng minh rằng bạn có kết nối IPv6</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn có một máy chủ IPv6 web làm việc</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn có một địa chỉ IPv6 email làm việc</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn đã làm việc phía trước IPv6 DNS</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn đã làm việc đảo ngược IPv6 DNS cho máy chủ mail của bạn</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn có máy chủ tên có địa chỉ IPv6 có thể đáp ứng với các truy vấn thông qua IPv6</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh kiến thức về công nghệ IPv6 qua kiểm tra nhanh chóng và dễ dàng</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the format of IPv6 addresses</strong></strong></strong></p>
+
+<p><strong><strong><strong> - AAAA records</strong></strong></strong></p>
+
+<p><strong><strong><strong> - reverse DNS for IPv6</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 localhost address</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 default route</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 documentation prefix</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 link local prefix</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 multicast prefix</strong></strong></strong></p>
+
+<p><strong><strong><strong> - how to do an IPv6 ping</strong></strong></strong></p>
+
+<p><strong><strong><strong> - how to do an IPv6 traceroute</strong></strong></strong></p>
+
+<p><strong><strong><strong> - common IPv6 prefix lengths such as /64, /48, /32</strong></strong></strong></p>
+
+<p>Nhiều người cho rằng khi thi chứng chỉ IPv6 của Hurricane Electric là vừa giải trí vừa giáo dục. Còn bạn thì sao? Hãy đăng ký thi ngay hôm nay vì IPv4 đang cạn kiệt dần và bạn cần bổ sung kiến thức vững vàn để chuyển đổi qua IPv6!</p>
+]]></content>
+  </entry>
+  
+</feed>

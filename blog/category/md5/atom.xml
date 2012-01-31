@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: md5 | Mr.Hien's Blog]]></title>
+  <link href="http://mrhien.info/blog/category/md5/atom.xml" rel="self"/>
+  <link href="http://mrhien.info/"/>
+  <updated>2012-01-31T22:23:31+07:00</updated>
+  <id>http://mrhien.info/</id>
+  <author>
+    <name><![CDATA[Hien]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Tạo đoạn hash md5 của 1 chuỗi kí tự trong Linux!]]></title>
+    <link href="http://mrhien.infoblog/generate-an-md5-hash/"/>
+    <updated>2010-10-17T21:11:00+07:00</updated>
+    <id>http://mrhien.infoblog/tao-doan-hash-md5-cua-1-chuoi-ki-tu-trong-linux</id>
+    <content type="html"><![CDATA[<ul>
+<li>Cách 1: Sử dụng OpenSSL:
+<code>
+  echo -n 'Hello! I am from Mr.Hien' | openssl md5
+</code></li>
+<li>Cách 2: Sử dụng md5sum:
+<code>
+  echo -n 'Hello! I am from Mr.Hien' | md5sum -
+</code></li>
+<li>Cách 3: Sử dụng php:
+<code>
+  php -r 'echo md5("Hello! I am from Mr.Hien") . "\n";'
+</code>
+Trên đây là những cách phổ biến. Ngoài ra còn nhiều cách để tạo hash md5 trong linux nữa!</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

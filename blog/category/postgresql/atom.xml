@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: PostgreSQL | Mr.Hien's Blog]]></title>
+  <link href="http://mrhien.info/blog/category/postgresql/atom.xml" rel="self"/>
+  <link href="http://mrhien.info/"/>
+  <updated>2012-01-31T22:23:31+07:00</updated>
+  <id>http://mrhien.info/</id>
+  <author>
+    <name><![CDATA[Hien]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cài đặt PostgreSQL 9 trên Fedora 15]]></title>
+    <link href="http://mrhien.info/blog/cai-dat-postgresql-9-tren-fedora-15/"/>
+    <updated>2011-06-18T20:57:00+07:00</updated>
+    <id>http://mrhien.info/blog/cai-dat-postgresql-9-tren-fedora-15</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://mrhien.info/wp-content/uploads/postgresql-object-rdms-logo.gif"></p>
+
+<p>Trên Fedora 15 có thể cài đặt PostgreSQL 9 qua Yum như sau:
+```</p>
+
+<pre><code>yum install postgresql-server
+</code></pre>
+
+<p><code>
+Khi cài đặt thành công chúng ta chạy tiếp lệnh sau để khởi tạo các cơ sở dữ liệu hệ thống ban đầu cho PostgreSQL:
+</code></p>
+
+<pre><code>/etc/init.d/postgresql initdb
+</code></pre>
+
+<p><code>
+Tiếp đến khởi chạy PostgreSQL Server bằng lệnh sau:
+</code></p>
+
+<pre><code>systemctl start postgresql.service
+</code></pre>
+
+<p>```
+Kiểm tra trạng thái dịch vụ xem chạy chưa ?</p>
+
+<!--more-->
+
+
+<p>```</p>
+
+<pre><code>[root@fedora15 ~]# systemctl status postgresql.service
+postgresql.service – LSB: start and stop PostgreSQL server
+Loaded: loaded (/etc/rc.d/init.d/postgresql)
+Active: active (running) since Sun, 19 Jun 2011 05:12:58 +0700; 2min 34s ago
+Process: 28703 ExecStart=/etc/rc.d/init.d/postgresql start (code=exited, status=0/SUCCESS)
+Main PID: 28727 (postmaster)
+CGroup: name=systemd:/system/postgresql.service
+├ 28727 /usr/bin/postmaster -p 5432 -D /var/lib/pgsql/data
+├ 28729 postgres: logger process
+├ 28731 postgres: writer process
+├ 28732 postgres: wal writer process
+├ 28733 postgres: autovacuum launcher process
+└ 28734 postgres: stats collector process
+</code></pre>
+
+<p><code>
+Sau đó tiến hành login để kiểm tra xem cài đặt đúng chưa?
+</code></p>
+
+<pre><code>[root@fedora15 ~]# su – postgres
+-bash-4.2$ psql
+psql (9.0.4)
+Type “help” for help.
+
+postgres=# SELECT VERSION();
+version
+—————————————————————————————————————
+PostgreSQL 9.0.4 on i386-redhat-linux-gnu, compiled by GCC gcc (GCC) 4.6.0 20110428 (Red Hat 4.6.0-6), 32-bit
+(1 row)
+
+postgres=#
+</code></pre>
+
+<p>```
+Chúc bạn thành công!.</p>
+]]></content>
+  </entry>
+  
+</feed>

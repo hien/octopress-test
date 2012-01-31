@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: editor | Mr.Hien's Blog]]></title>
+  <link href="http://mrhien.info/blog/category/editor/atom.xml" rel="self"/>
+  <link href="http://mrhien.info/"/>
+  <updated>2012-01-31T22:23:31+07:00</updated>
+  <id>http://mrhien.info/</id>
+  <author>
+    <name><![CDATA[Hien]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sử dụng Macro trong trình soạn thảo vim / vi (Phần 2)]]></title>
+    <link href="http://mrhien.info/blog/thu-thuat-linux-su-dung-macro-trong-vim-phan-2/"/>
+    <updated>2011-11-06T15:46:00+07:00</updated>
+    <id>http://mrhien.info/blog/su-dung-macro-trong-trinh-soan-thao-vim-slash-vi-phan-2</id>
+    <content type="html"><![CDATA[<p>Xem phần 1 <a href="/blog/thu-thuat-linux-su-dung-macro-trong-vim-phan-1/">tại đây</a></p>
+
+<p><strong>Ví dụ 2:</strong>  Tạo các câu truy vấn SQL (CREATE DATABASE) từ danh sách tên db có sẵn
+Ban đầu ta có tập tin “create-database.sql ” có nội dung như sau:</p>
+
+<!--more-->
+
+
+<p><img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_1.png" width="700" height="513" title="Vim Macro" >
+1. Ấn “qa”: để bắt đầu quá trình thu lại (record) macro
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_2.png" width="700" height="513" title="Vim Macro" >
+2. Ấn “I” : để chuyển sang chế độ Insert và dời con trỏ về ký tự đầu tiên của dòng
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_3.png" width="700" height="513" title="Vim Macro" >
+3. Gõ vào “CREATE DATABASE”
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_4.png" width="700" height="513" title="Vim Macro" >
+4. Ấn “Esc và A”: để duy chuyển đến cuối dòng hiện tại và gõ thêm ký tự “;”
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_5.png" width="700" height="513" title="Vim Macro" >
+5. Ấn “Esc và j”: để duy chuyển xuống dòng mới và ấn “q” để kết thúc quá trình thu lại (record) macro.
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_6.png" width="700" height="513" title="Vim Macro" >
+6. Thực thi macro bằng cách ấn “8@a” và kết quả thu được như dưới đây.
+<img class="center" src="http://mrhien.info/wp-content/uploads/2011/11/vim_macro_tut2_7.png" width="700" height="513" title="Vim Macro" >
+Chúc bạn thành công!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sử dụng Macro trong trình soạn thảo vim / vi (Phần 1)]]></title>
+    <link href="http://mrhien.info/blog/thu-thuat-linux-su-dung-macro-trong-vim-phan-1/"/>
+    <updated>2011-07-17T17:08:00+07:00</updated>
+    <id>http://mrhien.info/blog/su-dung-macro-trong-trinh-soan-thao-vim-slash-vi-phan-1</id>
+    <content type="html"><![CDATA[<p>Sử dụng Macro trong vim/vi bạn có thể quay lại (record) và cho chạy lại (play) một chuỗi các hành động trong trình soạn thảo.</p>
+
+<p><strong>CÁC BƯỚC CHÍNH ĐỂ TẠO VÀ SỬ DỤNG MACRO TRONG VIM:</strong></p>
+
+<ol>
+<li><p>Bắt đầu quá trình ghi lại (record) bằng cách nhấn phím “q” và theo sau bởi kí tự để đặt tên cho macro.</p></li>
+<li><p>Thực hiện bất kì hành động nào bên trong trình soạn thảo sẽ được ghi lại (record).</p></li>
+<li><p>Dừng việc ghi lại (record) bằng cách nhấn phím “q”.</p></li>
+<li><p>Cho chạy lại (play) các hành động đã được ghi (record) bằng cách nhấn “@” theo sau là tên macro</p></li>
+<li><p>Để chạy lại macro với số lần lặp xác đinh bằng cách nhấn “NN@” theo sau là tên macro, với NN là một con số nguyên.</p></li>
+</ol>
+
+
+<p>Ví dụ 1: Tạo chuỗi số trong trình soạn thảo vim bằng cách sử dụng macro</p>
+
+<!--more-->
+
+
+<ol>
+<li>Tạo một tập tin mới (chuoi-so.txt) bằng cách chạy lệnh:
+<code>
+ vim chuoi-so.txt
+</code></li>
+<li>Chuyển sang chế độ soạn thảo bằng cách nhấn “i” và gõ chuỗi “1.” vào:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_1.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Bắt đầu quá trình ghi lại macro có tên là “a” bằng cách nhấn phím “qa”. Dòng chữ “recording” sẽ hiển thị trong vim/vi:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_2.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Nhấn phím “y” (2 lần) và theo sau bởi phím “p” để sao chép dòng hiện hành và dán dòng vừa mới sao chép được:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_3.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Nhấn phím Ctrl + A để tắng số lên 1 đơn vị tại con trỏ chuột hiện hành:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_4.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Kết thúc quá trình ghi lại (record) bằng cách nhấn phím “q” và dòng chữ “recording” đã biến mất:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_5.png" width="700" height="513" title="Vim Macro" ></li>
+<li>Cho chạy lại macro với số lần xác định để tạo được chuỗi số 1..50 ở đầu mỗi dòng bằng cách nhấn “48@a” (NN là 48 vì ta có sẵn 2 dòng rồi)ta thu được kết quả sau:
+<img class="center" src="http://mrhien.info/wp-content/uploads/seq_vim_macro_6.png" width="700" height="513" title="Vim Macro" >
+Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro trong trình soạn thảo vim (Phần 2)”.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

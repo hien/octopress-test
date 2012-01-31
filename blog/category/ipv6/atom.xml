@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: IPv6 | Mr.Hien's Blog]]></title>
+  <link href="http://mrhien.info/blog/category/ipv6/atom.xml" rel="self"/>
+  <link href="http://mrhien.info/"/>
+  <updated>2012-01-31T22:23:31+07:00</updated>
+  <id>http://mrhien.info/</id>
+  <author>
+    <name><![CDATA[Hien]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Thi miễn phí chứng chỉ IPv6]]></title>
+    <link href="http://mrhien.info/blog/thi-mien-phi-chung-chi-ipv6/"/>
+    <updated>2010-10-01T14:40:00+07:00</updated>
+    <id>http://mrhien.info/blog/thi-mien-phi-chung-chi-ipv6</id>
+    <content type="html"><![CDATA[<p><img class="center" src="http://ipv6.he.net/certification/create_badge.php?pass_name=phanquochien&amp;badge=2" title="IPv6 Certificate" ></p>
+
+<p>Hurricane Electric đang tổ chức thi chứng chỉ IPv6 miễn phí tại địa chỉ <a href="http://ipv6.he.net/certification/">http://ipv6.he.net/certification/</a>.
+Các câu hỏi  sẽ và yêu cầu chú trọng vào các phần sau:</p>
+
+<!-- more -->
+
+
+<p><strong><strong><strong> - Chứng minh rằng bạn có kết nối IPv6</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn có một máy chủ IPv6 web làm việc</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn có một địa chỉ IPv6 email làm việc</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn đã làm việc phía trước IPv6 DNS</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn đã làm việc đảo ngược IPv6 DNS cho máy chủ mail của bạn</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh rằng bạn có máy chủ tên có địa chỉ IPv6 có thể đáp ứng với các truy vấn thông qua IPv6</strong></strong></strong></p>
+
+<p><strong><strong><strong> - Chứng minh kiến thức về công nghệ IPv6 qua kiểm tra nhanh chóng và dễ dàng</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the format of IPv6 addresses</strong></strong></strong></p>
+
+<p><strong><strong><strong> - AAAA records</strong></strong></strong></p>
+
+<p><strong><strong><strong> - reverse DNS for IPv6</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 localhost address</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 default route</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 documentation prefix</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 link local prefix</strong></strong></strong></p>
+
+<p><strong><strong><strong> - the IPv6 multicast prefix</strong></strong></strong></p>
+
+<p><strong><strong><strong> - how to do an IPv6 ping</strong></strong></strong></p>
+
+<p><strong><strong><strong> - how to do an IPv6 traceroute</strong></strong></strong></p>
+
+<p><strong><strong><strong> - common IPv6 prefix lengths such as /64, /48, /32</strong></strong></strong></p>
+
+<p>Nhiều người cho rằng khi thi chứng chỉ IPv6 của Hurricane Electric là vừa giải trí vừa giáo dục. Còn bạn thì sao? Hãy đăng ký thi ngay hôm nay vì IPv4 đang cạn kiệt dần và bạn cần bổ sung kiến thức vững vàn để chuyển đổi qua IPv6!</p>
+]]></content>
+  </entry>
+  
+</feed>

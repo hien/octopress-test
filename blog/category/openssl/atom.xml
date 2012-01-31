@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: OpenSSL | Mr.Hien's Blog]]></title>
+  <link href="http://mrhien.info/blog/category/openssl/atom.xml" rel="self"/>
+  <link href="http://mrhien.info/"/>
+  <updated>2012-01-31T22:23:31+07:00</updated>
+  <id>http://mrhien.info/</id>
+  <author>
+    <name><![CDATA[Hien]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mã hóa tập tin với OpenSSL]]></title>
+    <link href="http://mrhien.info/blog/thu-thuat-linux-ma-hoa-tap-tin-voi-openssl/"/>
+    <updated>2011-01-22T18:46:00+07:00</updated>
+    <id>http://mrhien.info/blog/ma-hoa-tap-tin-voi-openssl</id>
+    <content type="html"><![CDATA[<p>Lệnh đơn giản để mã hóa tập tin với OpenSSL là:
+<code>
+ openssl aes-256-cbc -a -salt -in quantrong.txt -out quantrong.txt.enc
+</code>
+- Trong đó:</p>
+
+<!--more-->
+
+
+<p>aes-256-cbc : <a href="http://en.wikipedia.org/wiki/Cipher">encryption cipher</a> được sử dụng đễ mã hóa.</p>
+
+<p>-a : xuất kết quả đã mã hóa dưới dạn base64 encoded.</p>
+
+<p>-<a href="http://en.wikipedia.org/wiki/Salt_(cryptography">salt</a>): thêm độ mạnh mã hóa</p>
+
+<p>-in quantrong.txt : đường dẫn tập tin cần mã hóa</p>
+
+<p>-out quantrong.txt.enc : đường dẫn để lưu tập tin đã được mã hóa</p>
+
+<p>Khi lệnh trên được thực thi OpenSSL sẽ hỏi mật khẩu để mã hóa.</p>
+
+<p>Để giải mã tập tin đã mã hóa sử dụng lệnh sau:
+<code>
+openssl aes-256-cbc -d -a -in quantrong.txt.enc -out quantrong.txt.new
+</code>
+- Trong đó:</p>
+
+<p>-d : ra lệnh cho OpenSSL giải mã tập tin</p>
+
+<p>-a : thông báo cho OpenSSL dữ liệu đầu vào ở trong dạng base64 encoded</p>
+
+<p>Các thông số khác tương tự câu lệnh mã hóa trên.
+OpenSSL sẽ hỏi mật khẩu đã dùng mã hóa để giải mã tập tin. Sau khi giải mã thu được tập tin quantrong.txt.new (theo ví dụ trên)
+Tham khảo thêm các tính năng của OpenSSL <a href="http://www.openssl.org/docs/apps/openssl.html">tại đây</a>
+Chúc các bạn thành công!</p>
+]]></content>
+  </entry>
+  
+</feed>
