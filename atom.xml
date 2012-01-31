@@ -4,7 +4,7 @@
   <title><![CDATA[Mr.Hien's Blog]]></title>
   <link href="http://mrhien.info/atom.xml" rel="self"/>
   <link href="http://mrhien.info/"/>
-  <updated>2012-02-01T01:43:46+07:00</updated>
+  <updated>2012-02-01T03:01:37+07:00</updated>
   <id>http://mrhien.info/</id>
   <author>
     <name><![CDATA[Hien]]></name>
@@ -344,6 +344,10 @@ Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro
 <p>Để Apache Tomcat có thể dễ dàng Start, Stop, Restart và tự động chạy khi Centos khởi động nên chúng ta tạo đoạn init script như sau:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# vi /etc/init.d/tomcat </span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -388,88 +392,88 @@ Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro
 <span class='line-number'>43</span>
 <span class='line-number'>44</span>
 <span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# vi /etc/init.d/tomcat
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/bin/bash</span>
 </span><span class='line'>
-</span><span class='line'>    #!/bin/bash
+</span><span class='line'><span class="c"># description: Tomcat Start Stop Restart</span>
 </span><span class='line'>
-</span><span class='line'>    # description: Tomcat Start Stop Restart
+</span><span class='line'><span class="c"># processname: tomcat</span>
 </span><span class='line'>
-</span><span class='line'>    # processname: tomcat
+</span><span class='line'><span class="c"># chkconfig: 234 20 80</span>
 </span><span class='line'>
-</span><span class='line'>    # chkconfig: 234 20 80
+</span><span class='line'><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/java/jdk1.6.0_25
 </span><span class='line'>
-</span><span class='line'>    JAVA_HOME=/usr/java/jdk1.6.0_25
+</span><span class='line'><span class="nb">export </span>JAVA_HOME
 </span><span class='line'>
-</span><span class='line'>    export JAVA_HOME
+</span><span class='line'><span class="nv">PATH</span><span class="o">=</span><span class="nv">$JAVA_HOME</span>/bin:<span class="nv">$PATH</span>
 </span><span class='line'>
-</span><span class='line'>    PATH=$JAVA_HOME/bin:$PATH
+</span><span class='line'><span class="nb">export </span>PATH
 </span><span class='line'>
-</span><span class='line'>    export PATH
+</span><span class='line'><span class="nv">CATALINA_HOME</span><span class="o">=</span>/opt/apache-tomcat-7.0.12
 </span><span class='line'>
-</span><span class='line'>    CATALINA_HOME=/opt/apache-tomcat-7.0.12
+</span><span class='line'><span class="k">case</span> <span class="nv">$1</span> in
 </span><span class='line'>
-</span><span class='line'>    case $1 in
+</span><span class='line'>start<span class="o">)</span>
 </span><span class='line'>
-</span><span class='line'>    start)
+</span><span class='line'>sh <span class="nv">$CATALINA_HOME</span>/bin/startup.sh
 </span><span class='line'>
-</span><span class='line'>    sh $CATALINA_HOME/bin/startup.sh
+</span><span class='line'>;;
 </span><span class='line'>
-</span><span class='line'>    ;;
+</span><span class='line'>stop<span class="o">)</span>
 </span><span class='line'>
-</span><span class='line'>    stop)
+</span><span class='line'>sh <span class="nv">$CATALINA_HOME</span>/bin/shutdown.sh
 </span><span class='line'>
-</span><span class='line'>    sh $CATALINA_HOME/bin/shutdown.sh
+</span><span class='line'>;;
 </span><span class='line'>
-</span><span class='line'>    ;;
+</span><span class='line'>restart<span class="o">)</span>
 </span><span class='line'>
-</span><span class='line'>    restart)
+</span><span class='line'>sh <span class="nv">$CATALINA_HOME</span>/bin/shutdown.sh
 </span><span class='line'>
-</span><span class='line'>    sh $CATALINA_HOME/bin/shutdown.sh
+</span><span class='line'>sleep 1
 </span><span class='line'>
-</span><span class='line'>    sleep 1
+</span><span class='line'>sh <span class="nv">$CATALINA_HOME</span>/bin/startup.sh
 </span><span class='line'>
-</span><span class='line'>    sh $CATALINA_HOME/bin/startup.sh
+</span><span class='line'>;;
 </span><span class='line'>
-</span><span class='line'>    ;;
+</span><span class='line'><span class="k">esac</span>
 </span><span class='line'>
-</span><span class='line'>    esac
-</span><span class='line'>
-</span><span class='line'>    exit 0</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="nb">exit </span>0
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Trong đoạn script trên biến CATALINA_HOME phải trỏ về thư mục chứa Apache Tomcat <code>/opt/apache-tomcat-7.0.12/</code></p>
 
 <p>Cấp quyền thực thi cho tập tin <code>/etc/init.d/tomcat</code> :</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# chmod +x /etc/init.d/tomcat</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>root@centos-server opt<span class="o">]</span><span class="c"># chmod +x /etc/init.d/tomcat</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Tiếp tục sử dụng công cụ chkconfig để cấu hình cho Tomcat chạy lúc Centos khởi động ( ở đây ví dụ Tomcat tự động chạy ở runlevel 2,3,4) :</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# chkconfig –add tomcat
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>root@centos-server opt<span class="o">]</span><span class="c"># chkconfig –add tomcat</span>
 </span><span class='line'>
-</span><span class='line'>[root@centos-server opt]# chkconfig –level 234 tomcat on</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="o">[</span>root@centos-server opt<span class="o">]</span><span class="c"># chkconfig –level 234 tomcat on</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Kiểm tra lại:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# chkconfig –list tomcat
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>root@centos-server opt<span class="o">]</span><span class="c"># chkconfig –list tomcat</span>
 </span><span class='line'>
-</span><span class='line'>    tomcat 0:off 1:off 2:on 3:on 4:on 5:off 6:off</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>    tomcat 0:off 1:off 2:on 3:on 4:on 5:off 6:off
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Bây giờ chúng ta sẽ tiến hành Start Apache Tomcat:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -480,7 +484,7 @@ Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server opt]# service tomcat start
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>root@centos-server opt<span class="o">]</span><span class="c"># service tomcat start</span>
 </span><span class='line'>
 </span><span class='line'>    Using CATALINA_BASE: /opt/apache-tomcat-7.0.12
 </span><span class='line'>
@@ -490,7 +494,8 @@ Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro
 </span><span class='line'>
 </span><span class='line'>    Using JRE_HOME: /usr/java/jdk1.6.0_25
 </span><span class='line'>
-</span><span class='line'>    Using CLASSPATH: /opt/apache-tomcat-7.0.12/bin/bootstrap.jar:/opt/apache-tomcat-7.0.12/bin/tomcat-juli.jar</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>    Using CLASSPATH: /opt/apache-tomcat-7.0.12/bin/bootstrap.jar:/opt/apache-tomcat-7.0.12/bin/tomcat-juli.jar
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Chúng ta truy cập bằng HTTP vào cổng mặc định 8080 để kiếm tra (ví dụ <code>http://192.168.1.3:8080</code>). Nếu Apache Tomcat start thành công sẽ nhìn thấy tương tự như sau:
@@ -500,8 +505,9 @@ Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro
 
 <p>Vì lí do bảo mật Apache Tomcat 7 không tạo sẵn bất kì người dùng và mật khẩu mặc định nào cho Tomcat Manager. Nếu như chúng ta muốn sử dụng thì chỉnh sửa nội dung tập tin $CATALINA_HOME/conf/tomcat-users.xml</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server /]# vi /opt/apache-tomcat-7.0.12/conf/tomcat-users.xml</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>root@centos-server /<span class="o">]</span><span class="c"># vi /opt/apache-tomcat-7.0.12/conf/tomcat-users.xml</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Nội dung tập tin <a href="http://mrhien.info/wp-content/uploads/tomcat_users.txt">tomcat-users.xml</a></p>
@@ -518,17 +524,18 @@ Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro
 
 <p>Chúng ta tạo người dùng tên “tomcat” và gán quyển thư mục Apache Tomcat cho người dùng “tomcat”:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server /]# useradd -d /opt/apache-tomcat-7.0.12 tomcat
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>root@centos-server /<span class="o">]</span><span class="c"># useradd -d /opt/apache-tomcat-7.0.12 tomcat</span>
 </span><span class='line'>
-</span><span class='line'>[root@centos-server /]# chown -R tomcat:tomcat /opt/apache-tomcat-7.0.12/</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="o">[</span>root@centos-server /<span class="o">]</span><span class="c"># chown -R tomcat:tomcat /opt/apache-tomcat-7.0.12/</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Và tiến hành chỉnh sửa tập tin <code>/etc/init.d/tomcat</code> thành như sau:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -573,51 +580,51 @@ Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro
 <span class='line-number'>43</span>
 <span class='line-number'>44</span>
 <span class='line-number'>45</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/bash
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/bin/bash</span>
 </span><span class='line'>
-</span><span class='line'># description: Tomcat Start Stop Restart
+</span><span class='line'><span class="c"># description: Tomcat Start Stop Restart</span>
 </span><span class='line'>
-</span><span class='line'># processname: tomcat
+</span><span class='line'><span class="c"># processname: tomcat</span>
 </span><span class='line'>
-</span><span class='line'># chkconfig: 234 20 80
+</span><span class='line'><span class="c"># chkconfig: 234 20 80</span>
 </span><span class='line'>
-</span><span class='line'>JAVA_HOME=/usr/java/jdk1.6.0_25
+</span><span class='line'><span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/java/jdk1.6.0_25
 </span><span class='line'>
-</span><span class='line'>export JAVA_HOME
+</span><span class='line'><span class="nb">export </span>JAVA_HOME
 </span><span class='line'>
-</span><span class='line'>PATH=$JAVA_HOME/bin:$PATH
+</span><span class='line'><span class="nv">PATH</span><span class="o">=</span><span class="nv">$JAVA_HOME</span>/bin:<span class="nv">$PATH</span>
 </span><span class='line'>
-</span><span class='line'>export PATH
+</span><span class='line'><span class="nb">export </span>PATH
 </span><span class='line'>
-</span><span class='line'>CATALINA_HOME=/opt/apache-tomcat-7.0.12
+</span><span class='line'><span class="nv">CATALINA_HOME</span><span class="o">=</span>/opt/apache-tomcat-7.0.12
 </span><span class='line'>
-</span><span class='line'>case $1 in
+</span><span class='line'><span class="k">case</span> <span class="nv">$1</span> in
 </span><span class='line'>
-</span><span class='line'>start)
+</span><span class='line'>start<span class="o">)</span>
 </span><span class='line'>
-</span><span class='line'>/bin/su tomcat $CATALINA_HOME/bin/startup.sh
-</span><span class='line'>
-</span><span class='line'>;;
-</span><span class='line'>
-</span><span class='line'>stop)
-</span><span class='line'>
-</span><span class='line'>/bin/su tomcat sh $CATALINA_HOME/bin/shutdown.sh
+</span><span class='line'>/bin/su tomcat <span class="nv">$CATALINA_HOME</span>/bin/startup.sh
 </span><span class='line'>
 </span><span class='line'>;;
 </span><span class='line'>
-</span><span class='line'>restart)
+</span><span class='line'>stop<span class="o">)</span>
 </span><span class='line'>
-</span><span class='line'>/bin/su tomcat sh $CATALINA_HOME/bin/shutdown.sh
+</span><span class='line'>/bin/su tomcat sh <span class="nv">$CATALINA_HOME</span>/bin/shutdown.sh
+</span><span class='line'>
+</span><span class='line'>;;
+</span><span class='line'>
+</span><span class='line'>restart<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'>/bin/su tomcat sh <span class="nv">$CATALINA_HOME</span>/bin/shutdown.sh
 </span><span class='line'>
 </span><span class='line'>sleep 1
 </span><span class='line'>
-</span><span class='line'>/bin/su tomcat sh $CATALINA_HOME/bin/startup.sh
+</span><span class='line'>/bin/su tomcat sh <span class="nv">$CATALINA_HOME</span>/bin/startup.sh
 </span><span class='line'>
 </span><span class='line'>;;
 </span><span class='line'>
-</span><span class='line'>esac
+</span><span class='line'><span class="k">esac</span>
 </span><span class='line'>
-</span><span class='line'>exit 0
+</span><span class='line'><span class="nb">exit </span>0
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -625,8 +632,9 @@ Sẽ còn Ví dụ 2 tiếp theo của bài viết này ở “Sử dụng Macro
 
 <p>Trong Linux để chạy cổng dưới 1024 thì cần quyền root tuy nhiên chúng ta có thể sử dụng iptables để giải quyển vấn đề này như sau:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[root@centos-server /]# iptables -t nat -A PREROUTING -p tcp -m tcp –dport 80 -j REDIRECT –to-ports 8080</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>root@centos-server /<span class="o">]</span><span class="c"># iptables -t nat -A PREROUTING -p tcp -m tcp –dport 80 -j REDIRECT –to-ports 8080</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Bài viết đến đây là kết thúc. Mọi đóng góp xin gửi về admin[at]mrhien[dot]info . Xin chân thành cảm ơn.</p>

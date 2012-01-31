@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tomcat | Mr.Hien's Blog]]></title>
   <link href="http://mrhien.info/blog/category/tomcat/atom.xml" rel="self"/>
   <link href="http://mrhien.info/"/>
-  <updated>2012-02-01T01:43:46+07:00</updated>
+  <updated>2012-02-01T03:01:37+07:00</updated>
   <id>http://mrhien.info/</id>
   <author>
     <name><![CDATA[Hien]]></name>
@@ -106,9 +106,12 @@ Kết thúc chúng giải nén được Apache Tomcat 7 nằm tại:</code>/opt/
 
 <p>Bước 3: Cấu hình Apache Tomcat chạy như một dịch vụ</p>
 
-<p>Để Apache Tomcat có thể dễ dàng Start, Stop, Restart và tự động chạy khi Centos khởi động nên chúng ta tạo đoạn init script như sau:
-```
-[root@centos-server opt]# vi /etc/init.d/tomcat</p>
+<p>Để Apache Tomcat có thể dễ dàng Start, Stop, Restart và tự động chạy khi Centos khởi động nên chúng ta tạo đoạn init script như sau:</p>
+
+<p><code>
+[root@centos-server opt]# vi /etc/init.d/tomcat
+</code>
+``` bash</p>
 
 <pre><code>#!/bin/bash
 
@@ -222,7 +225,7 @@ Nội dung tập tin <a href="http://mrhien.info/wp-content/uploads/tomcat_users
 <p>[root@centos-server /]# chown -R tomcat:tomcat /opt/apache-tomcat-7.0.12/
 <code>
 Và tiến hành chỉnh sửa tập tin</code>/etc/init.d/tomcat<code>thành như sau:
-</code></p>
+</code> bash</p>
 
 <h1>!/bin/bash</h1>
 
